@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="1dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="1dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".35"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/imgSkuIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_noimage"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_image_round" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/skuName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:text="@string/blanktext"
+                android:textColor="@android:color/black"
+                app:myfont="GothamLight.otf" />
+        </LinearLayout>
+
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/brandName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/black"
+            app:myfont="GothamLight.otf" />
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/brandPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/black"
+            android:visibility="gone"
+            app:myfont="GothamLight.otf" />
+
+        <EditText
+            android:id="@+id/edtOrderQuantity"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_edittext_rounded"
+            android:layout_weight=".15"
+            android:fontFamily="@font/gothamlight"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/tvUnit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/kg"
+            android:textColor="@android:color/black"
+            app:myfont="GothamLight.otf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOrederAdd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addtoorderlist"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

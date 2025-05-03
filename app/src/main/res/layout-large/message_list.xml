@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:reverseLayout="true"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_grid_child_count="2"
+        app:shimmer_demo_layout="@layout/layout_sample_view"
+        app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+</LinearLayout>

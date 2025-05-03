@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/llPartyOutstaingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothamlight"
+                android:text="Credit Days"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvCreditDays"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:text="----"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothamlight"
+                android:text="Credit Limit"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvCreditLimit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:text="----"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothamlight"
+                android:text="Bill Date"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:id="@+id/tvBillDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:text="----"
+                android:textColor="@color/material_light_primary_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothamlight"
+                android:text="Bill Number"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:id="@+id/tvBillNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:text="----"
+                android:textColor="@color/material_light_primary_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothamlight"
+                android:text="Bill Amount"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/material_light_primary_text" />
+
+            <TextView
+                android:id="@+id/tvBillAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:text="----"
+                android:textColor="@color/material_light_primary_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothammedium"
+                android:text="Due Days"
+                android:textColor="@color/red_like" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/red_like" />
+
+            <TextView
+                android:id="@+id/tvDueDays"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothammedium"
+                android:text="----"
+                android:textColor="@color/red_like" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothammedium"
+                android:text="Pending/Overdue Amt"
+                android:textColor="@color/red_like" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/red_like" />
+
+            <TextView
+                android:id="@+id/tvPendingAmt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothammedium"
+                android:text="----"
+                android:textColor="@color/red_like" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:fontFamily="@font/gothammedium"
+                android:text="Last updated" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/red_like" />
+
+            <TextView
+                android:id="@+id/tvLastUpdated"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothammedium"
+                android:text="----"
+                android:textColor="@color/red_like" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tabPartyOutStanding"
+            android:background="@color/material_light_hint_text"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCommentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llAddComment"
+        android:layout_below="@+id/llPartyOutstaingDetails" />
+
+    <RelativeLayout
+        android:id="@+id/llAddComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llShowComment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#efefef">
+
+            <ImageView
+                android:id="@+id/imgShowHide"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:rotation="180"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Add Comments"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPartyOutStandingFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llShowComment"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvPartyMessageList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llComment"
+                android:background="@drawable/pattern"
+                android:paddingBottom="10dp"
+                android:visibility="visible"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <RelativeLayout
+                android:id="@+id/llComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffff"
+                android:elevation="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/llSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/circle_back_green">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:padding="2dp"
+                        android:rotation="45"
+                        android:src="@drawable/ic_near_me_color_24dp"
+                        android:tint="@android:color/white" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/llSend">
+
+                    <EditText
+                        android:id="@+id/edtPartyFeedBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toLeftOf="@+id/imgAttachment"
+                        android:background="#ffffff"
+                        android:hint="type here..."
+                        android:minHeight="50dp"
+                        android:padding="5dp" />
+
+                    <ImageView
+                        android:id="@+id/imgAttachment"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="#ffffff"
+                        android:src="@drawable/ic_attachment_black_24dp"
+                        android:tint="#c0c0c0" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRooTD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/material_ripple_light">
+
+        <EditText
+            android:id="@+id/edtTownSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight=".85"
+            android:hint="Search town type here"
+            android:padding="5dp" />
+
+        <ImageView
+            android:id="@+id/imgCloseTownListDialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".15"
+            android:background="?android:selectableItemBackground"
+            android:padding="15dp"
+            android:src="@drawable/closeicon" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgNoRecordD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_record" />
+
+        <TextView
+            android:id="@+id/tvTempD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgNoRecord"
+            android:layout_centerInParent="true"
+            android:text="No Record" />
+
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/rvTownListD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="10"
+            app:shimmer_demo_grid_child_count="2"
+            app:shimmer_demo_layout="@layout/layout_sample_view"
+            app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

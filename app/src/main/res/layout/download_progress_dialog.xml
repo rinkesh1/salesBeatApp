@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/textColor"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/headerDataD"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:text="Please wait while downloading..."
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDownloadStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1">
+
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/material_light_hint_text" />
+
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/circle_with_redborder" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tvDisMappingDownloadProgress"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="0%"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:visibility="gone"/>-->
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/imgLoaderDisMap"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/loader_gif" />
+
+                            <ImageView
+                                android:id="@+id/imgDisMappingDownloadDone"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:src="@drawable/refresh"
+                                android:tint="@color/colorAccent"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDownloadingDisMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Initializing Distributors Mapping"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvTryAgainDisMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Try Again"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1">
+
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/material_light_hint_text" />
+
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/circle_with_redborder" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tvDisDownloadProgress"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="0%"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:visibility="gone" />-->
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/imgLoaderDis"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/loader_gif" />
+
+
+                            <ImageView
+                                android:id="@+id/imgDisDownloadDone"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:src="@drawable/refresh"
+                                android:tint="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDownloadingDis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Downloading Distributors List"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvTryAgainDis"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Try Again"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1">
+
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/material_light_hint_text" />
+
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/circle_with_redborder" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tvBeatDownloadProgress"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="0%"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:visibility="gone" />-->
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/imgLoaderBeat"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/loader_gif" />
+
+                            <ImageView
+                                android:id="@+id/imgBeatDownloadDone"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:src="@drawable/refresh"
+                                android:tint="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDownloadingBeats"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Downloading Beat List"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvTryAgainBeat"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Try Again"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".10"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1">
+
+
+                        <LinearLayout
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/material_light_hint_text" />
+
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/circle_with_redborder" />
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tvRetDownloadProgress"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="0%"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:visibility="gone" />-->
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:id="@+id/imgLoaderRet"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/loader_gif" />
+
+                            <ImageView
+                                android:id="@+id/imgRetDownloadDone"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:src="@drawable/refresh"
+                                android:tint="@color/colorAccent" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDownloadingRet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Downloading Retailers List"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvTryAgainRet"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Try Again"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/closeDownloadDialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@drawable/closeicon"
+            android:tint="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

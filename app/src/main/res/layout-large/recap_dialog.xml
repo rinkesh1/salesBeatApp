@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvBeatNameRecap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothammedium"
+            android:padding="5dp"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvLastVisitedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothammedium"
+            android:padding="5dp"
+            android:text="Last Visit"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:fontFamily="@font/gothammedium"
+            android:text="SC"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:fontFamily="@font/gothammedium"
+            android:text=":"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvScRecap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:fontFamily="@font/gothammedium"
+            android:text="0"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:fontFamily="@font/gothammedium"
+            android:text="TC"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:fontFamily="@font/gothammedium"
+            android:text=":"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvTcRecap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:fontFamily="@font/gothammedium"
+            android:text="0"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:fontFamily="@font/gothammedium"
+            android:text="PC"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:fontFamily="@font/gothammedium"
+            android:text=":"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvPcRecap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:fontFamily="@font/gothammedium"
+            android:text="0"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:fontFamily="@font/gothammedium"
+            android:text="Prod%"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:fontFamily="@font/gothammedium"
+            android:text=":"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvProductivityRecap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:fontFamily="@font/gothammedium"
+            android:text="0%(Pc/Sc)"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".25"
+            android:fontFamily="@font/gothammedium"
+            android:text="Visit By"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".05"
+            android:fontFamily="@font/gothammedium"
+            android:text=":"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvVisitedByRecap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:fontFamily="@font/gothammedium"
+            android:text="Bharat Sharma"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <TextView
+            android:id="@+id/tvProductivityPer"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:rotation="-90"
+            android:text="\u27f5 Productivity \u27f6" />
+
+        <com.newsalesbeatApp.customview.LineChartView
+            android:id="@+id/lcRecap"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/tvProductivityPer" />
+
+        <TextView
+            android:id="@+id/tvTextLastVisitsCounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lcRecap"
+            android:gravity="center"
+            android:text="\u27f5 Last Visits \u27f6" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llOkRecap"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvOkRecap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothammedium"
+            android:text="OK"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:id="@+id/headerRL"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:padding="12dp"
+                android:src="@drawable/leftarrow_white" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/pageTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".70"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:myfont="GothamMedium.otf" />
+
+            <ImageView
+                android:id="@+id/imgFilterBy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="17dp"
+                android:src="@drawable/filter_by" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llOrderConfirmation"
+        android:layout_below="@+id/headerRL"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".20"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/sku"
+                android:textColor="@android:color/white" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/brandname"
+                android:textColor="@android:color/white" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/qnty"
+                android:textColor="@android:color/white" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:text="@string/unit"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSkuErrormsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvSkuList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout="@layout/layout_sample_view"
+                app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llOrderConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvStc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".77"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Stock Confirmation"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:padding="17dp"
+                android:src="@drawable/forward_new"
+                android:tint="@color/app_background" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

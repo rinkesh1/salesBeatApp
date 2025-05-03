@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlCal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?selectableItemBackgroundBorderless"
+    android:gravity="center">
+
+    <com.newsalesbeatApp.customview.CustomTextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/dummydate"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        app:myfont="GothamMedium.otf" />
+
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/content"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/tra_cir"
+        android:gravity="center"
+        android:padding="5dp"
+        app:rb_color="#c0c0c0"
+        app:rb_duration="1500"
+        app:rb_radius="2dp"
+        app:rb_rippleAmount="2"
+        app:rb_scale="6" />
+
+</RelativeLayout>

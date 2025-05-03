@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notif_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="#323232">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="8dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="14dp">
+
+        <com.newsalesbeatApp.customview.RoundedImageView
+            android:id="@+id/roundImageNotify"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/roundImageNotify"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/gothambook"
+                android:text="Genre"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/gothambook"
+                android:text="Title"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/gothamlightf"
+                android:text="Year and Time"
+                android:textAlignment="textEnd"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

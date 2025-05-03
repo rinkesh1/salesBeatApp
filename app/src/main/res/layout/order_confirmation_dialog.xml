@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
+
+
+    <LinearLayout
+        android:id="@+id/llcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/sku"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/brandname"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textColor="@color/textColor"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/qnty"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:text="@string/unit"
+                android:textColor="@color/textColor" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSkuListDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/totalValue"
+        android:layout_below="@+id/llcontent" />
+
+
+    <LinearLayout
+        android:id="@+id/totalValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llOrderConfirmation"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/material_light_hint_text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:paddingLeft="10dp"
+                android:text="Total Weight"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTotalWieghtInKg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:text="------------"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:paddingLeft="10dp"
+                android:text="Total Bag"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTotalBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:text="------------"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:paddingLeft="10dp"
+                android:text="Total Pcs"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTotalPcs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:text="------------"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:paddingLeft="10dp"
+                android:text="Total"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothamlight"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvTotalUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:fontFamily="@font/gothamlight"
+                android:text="------------"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llOrderConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#F0f0f0"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/llConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Confirm"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

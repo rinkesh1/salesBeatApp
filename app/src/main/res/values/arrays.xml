@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Dashboard</item>
+        <item>My PJP</item>
+        <item>Profile</item>
+        <item>Logout</item>
+        <!-- <item>Log Out</item>-->
+    </string-array>
+
+
+    <!--<string-array name="ld_activityScreenIcons">-->
+    <!--<item>@drawable/dashboard_icon</item>-->
+    <!--<item>@drawable/ic_perm_identity_white_24dp</item>-->
+    <!--<item>@drawable/calendar_icon</item>-->
+    <!--<item>@drawable/log_out</item>-->
+    <!--</string-array>-->
+
+
+    <string-array name="itemlist1">
+
+        <item>Brand</item>
+        <item>Price</item>
+        <item>Unit</item>
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarIncentiveHistoryMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:minHeight="?android:attr/actionBarSize"
+            app:mcv_headerTextAppearance="@color/textColor" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/textColor"
+        android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/tvIncentiveDate"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight=".3"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="DATE"
+            android:textColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/tvIncentiveSale"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="PRIMARY SALE"
+            android:textColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/tvIncentiveAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="AMOUNT"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIncentiveHistoryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

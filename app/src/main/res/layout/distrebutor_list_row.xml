@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight=".2"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_rectangle"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/men_placeholder" />
+
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/distrebutorIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/material_light_hint_text"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:visibility="gone"
+                    app:myfont="GothamMedium.otf" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="@drawable/custom_rectangle">
+
+                    <ImageView
+                        android:id="@+id/callIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_local_phone_black_24dp" />
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary" />
+
+                    <ImageView
+                        android:id="@+id/locationIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_location_on_black_24dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/feedBackIcon"
+                        android:layout_width="37dp"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_feedback_black_24dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llDistributorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".85"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDistrebuterName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:fontFamily="@font/gothammedium"
+                            android:maxLines="2"
+                            android:text="@string/blanktext"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tvDistrebuterAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:fontFamily="@font/gothambook"
+                            android:maxLines="2"
+                            android:text="@string/blanktext"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".15"
+                        android:gravity="center|top">
+
+                        <ImageView
+                            android:id="@+id/infoIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="5dp"
+                            android:src="@drawable/info_icon" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1">
+
+
+                <ImageView
+                    android:id="@+id/nextIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_48dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/demo_light_transparent" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/llLAbel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|end"
+                    android:paddingTop="5dp"
+                    android:text="Target"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|end"
+                    android:text="Achmnt"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llBarTA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/llBarVal"
+                android:layout_toRightOf="@+id/llLAbel"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.newsalesbeatApp.customview.HorizontalStackBarChartView2
+                    android:id="@+id/barChartSale"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llBarVal"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvVal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="00"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvVal2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/demo_light_transparent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+
+                <TextView
+                    android:id="@+id/tvOrderHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Order History"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+                <TextView
+                    android:id="@+id/tvStockHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Stock History"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+                <TextView
+                    android:id="@+id/tvPartyOutstanding"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="View Bills"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/demo_light_transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvDisBookOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Book Order"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tvDisReviseOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Revise Order"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvStockCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Stock Capture"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tvReviseStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="Revise Stock"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="---------"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

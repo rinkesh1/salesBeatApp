@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tbT"
+        layout="@layout/toolbar3" />
+
+    <!-- <RelativeLayout
+         android:id="@+id/tbT"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <android.support.design.widget.AppBarLayout android:id="@+id/appBar"
+             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+             android:layout_width="match_parent"
+             android:layout_height="?actionBarSize"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:elevation="8dp">
+
+             <android.support.v7.widget.Toolbar
+                 android:id="@+id/toolbar3"
+                 android:layout_width="match_parent"
+                 android:contentInsetLeft="0dp"
+                 android:contentInsetStart="0dp"
+                 app:contentInsetLeft="0dp"
+                 app:contentInsetStart="0dp"
+                 android:contentInsetRight="0dp"
+                 android:contentInsetEnd="0dp"
+                 app:contentInsetRight="0dp"
+                 app:contentInsetEnd="0dp"
+                 android:layout_height="match_parent"
+                 android:background="@color/colorPrimary">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+                     <ImageView
+                         android:id="@+id/imgBack"
+                         android:layout_width="50dp"
+                         android:padding="12dp"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/leftarrow_white" />
+
+
+                     <com.salesbeat.customview.CustomTextView
+                         android:id="@+id/pageTitle"
+                         android:visibility="visible"
+                         android:layout_toLeftOf="@+id/chbSAll"
+                         android:layout_toRightOf="@+id/imgBack"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:gravity="center"
+                         android:text="@string/app_name"
+                         android:textSize="18sp"
+                         android:textColor="@android:color/white"
+                         app:font="gothammediumf.otf"/>
+
+                     <CheckBox
+                         android:id="@+id/chbSAll"
+                         android:visibility="gone"
+                         android:textColor="@android:color/white"
+                         android:text="Select All"
+                         android:layout_alignParentRight="true"
+                         android:layout_width="100dp"
+                         android:layout_height="match_parent" />
+
+                 </RelativeLayout>
+
+             </android.support.v7.widget.Toolbar>
+
+         </android.support.design.widget.AppBarLayout>
+
+     </RelativeLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOrderHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvShare"
+        android:layout_below="@+id/tbT" />
+
+
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="Share"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFilter"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/filter_by" />
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "292187759442",
+    "firebase_url": "https://carbide-legend-183707.firebaseio.com",
+    "project_id": "carbide-legend-183707",
+    "storage_bucket": "carbide-legend-183707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292187759442:android:1950fd647842ceac95508b",
+        "android_client_info": {
+          "package_name": "com.newsalesbeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcFIbgmm8Q1wqCOs1PnPyV-neUhyQD41M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292187759442:android:56dbc7cc5fa95edb95508b",
+        "android_client_info": {
+          "package_name": "com.newsalesbeatApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcFIbgmm8Q1wqCOs1PnPyV-neUhyQD41M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292187759442:android:6d126dba15430b9c",
+        "android_client_info": {
+          "package_name": "com.salesbeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292187759442-9c5h3pqbqarepmlp9no2s9kdkjg0ulnu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salesbeat",
+            "certificate_hash": "c80045db2097f739933e213f93cb835eae81b8dd"
+          }
+        },
+        {
+          "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcFIbgmm8Q1wqCOs1PnPyV-neUhyQD41M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292187759442-iisaimnbmirvjdl1khugokjq68h3e8j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

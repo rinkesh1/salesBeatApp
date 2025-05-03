@@ -1,0 +1,320 @@
+<resources>
+    <string name="app_name">SalesBeat</string>
+
+    <!--sharedpreferences name and keys-->
+    <string name="pref_name">SFA</string>
+    <!--<string name="pref_name_2">Sb_SFA</string>-->
+    <string name="company_id_key">cmny_id</string>
+    <string name="company_name_key">cmny_name</string>
+    <string name="company_logourl_key">logo_url</string>
+    <string name="temp_pref_name">Temp</string>
+    <string name="temp_pref_name_2">Tempp</string>
+    <string name="emp_id_key">employee_id</string>
+    <string name="emp_name_key">employee_name</string>
+    <string name="emp_phoneno_key">employee_mobile</string>
+    <string name="emp_emailid_key">employee_email</string>
+    <string name="emp_pic_url_key">employee_pic_url</string>
+    <string name="emp_designation_key">employee_designation</string>
+    <string name="emp_reportingto_key">employee_reporting_to</string>
+    <string name="emp_headq_key">employee_headoffice</string>
+    <string name="incentive_key">incentive</string>
+    <string name="incentive_status_key">incentiveStatus</string>
+    <string name="date_key">date</string>
+    <string name="attendance_key">attendance</string>
+    <string name="state_key">state</string>
+    <string name="zone_key">zone</string>
+    <string name="zone_id_key">zone_id</string>
+    <string name="dis_id_key">distributor_id</string>
+    <string name="dis_name_key">distributorName</string>
+    <string name="beat_id_key">beat_id</string>
+    <string name="beat_name_key">beatName</string>
+    <string name="isonjw_key">isOnJointWorking</string>
+    <string name="jw_with_emp_key">jointWorkingWithEmp</string>
+    <string name="jw_reason_key">jwReason</string>
+    <string name="askfororder_key">willTakeOrder</string>
+    <string name="lat_key">latitude_val</string>
+    <string name="longi_key">longitude_val</string>
+    <string name="fda_key">isOnFDA</string>
+    <string name="fda_type_key">fdaType</string>
+    <string name="fda_remarks_key">fdaRemarks</string>
+    <string name="is_on_retailer_page">isOnRetailerActivity</string>
+    <string name="is_logged_in">IsLoggedIn</string>
+    <string name="saved_pin_key">savedPin</string>
+    <string name="town_name_key">townName</string>
+    <string name="check_in_time_key">checkInTime</string>
+    <string name="check_in_time_key_new">checkInTme</string>
+    <string name="check_out_time_key">checkOutTime</string>
+    <string name="working_time_key">workingTime</string>
+    <string name="reason_key">leaveReason</string>
+    <string name="is_aplied_ta_key">ta</string>
+    <string name="is_aplied_da_key">da</string>
+    <string name="is_aplied_other_key">other</string>
+    <string name="new_feature_key">newfeature</string>
+    <string name="closing_start_date_key">sdate</string>
+    <string name="closing_end_date_key">edate</string>
+    <string name="act_type_key">actType</string>
+    <string name="townErrorKey">townerrormsg</string>
+    <string name="distErrorKey">disterrormsg</string>
+    <string name="skuErrorKey">skuerrormsg</string>
+    <string name="beatErrorKey">beaterrormsg</string>
+    <string name="retErrorKey">reterrormsg</string>
+    <string name="tomActType">tomacttype</string>
+    <string name="tomWorkinTown">tomworkingtown</string>
+    <string name="tomWorkingDis">tomworkingdis</string>
+    <string name="tomEmpWith">tomworkingwith</string>
+    <string name="tomMeetingType">tommeetingtype</string>
+    <string name="tomComment">tomcomment</string>
+    <string name="token_key">token</string>
+    <string name="shareSummaryKey">isSummaryShared</string>
+
+    <string name="timeformat">hh:mm:ss a</string>
+    <string name="dateformat">dd-MM-yyyy</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Rungta tea company id (change id if company changed)-->
+    <string name="cmny_id">1</string>
+
+    <!--change T for test url,D for demo url,L for live url AND Loc for local url  And N For NewLive .net URL BY @Umesh-->
+    <string name="url_mode">T</string>
+
+    <!--Domain Test for testing and Live for actual working rtpl@123 -->
+    <string name="live_url">https://api.salesbeat.in/</string>
+
+    <string name="demo_url">http://elb.salesbeat.in/</string>
+    <string name="local_url">http://192.168.1.64:8000/</string>
+    <!--    <string name="new_url">https://salesbeat.rungtatea.in/</string>-->
+
+
+    <!--Senrty Dns Live & Test-->
+    <string name="sentry_live_dns">https://611564f7a79d49aea1b1c91f03c626b4@sentry.io/1282959</string>
+    <string name="sentry_test_dns">https://7cd2fb4bdc7242eaa0cefff9cd5ef1b3@sentry.io/1282961</string>
+
+    <!--NewSenrty Dns Live & Test  Umesh-->
+    <string name="new_live_url">https://salesbeat.rungtatea.in/</string>
+    <string name="new_test_url">http://testsalesbeat.rungtatea.in/</string>
+    <string name="new_sentry_live_dns">https://18dcdb83c55f489f83dd3c6980df030e@o124799.ingest.sentry.io/6374616</string>
+    <string name="new_sentry_test_dns">https://5e1457a1916647928ef0e358fd07e747@o124799.ingest.sentry.io/6716009</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="done">Done</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="yes_h">हाँ</string>
+    <string name="no_h">नहीं</string>
+    <string name="alert">Alert!!</string>
+    <string name="alert_h" translatable="false">अलर्ट!!</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
+    <string name="otherlang">Other</string>
+    <string name="login">LogIn</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="next">Next/अगला</string>
+    <string name="prev">Previous/पिछला </string>
+    <string name="verifyuser">Verify User</string>
+    <string name="user"> Dhirendra Thakur</string>
+    <string name="position"> Android Developer</string>
+    <string name="reportintto">Reporting to : Naman Rungta</string>
+    <string name="working_e">DASHBOARD</string>
+    <string name="report_e">REPORTS</string>
+    <string name="working_h">डैशबोर्ड</string>
+    <string name="report_h">रिपोर्ट</string>
+    <string name="present_e">Present</string>
+    <string name="absent_e">Absent</string>
+    <string name="leave_e">Leave</string>
+    <string name="holiday_e">Holiday</string>
+    <string name="weeklyoff_e">Weekly Off</string>
+    <string name="present_h">उपस्थित</string>
+    <string name="absent_h">अनुपस्थित</string>
+    <string name="leave_h">छुट्टी पर</string>
+    <string name="holiday_h">अवकाश</string>
+    <string name="weeklyoff_h">साप्ताहिक अवकाश</string>
+    <string name="checkout_e">Check out time</string>
+    <string name="checkin_e">Check in</string>
+    <string name="checkout_h">चेक आउट</string>
+    <string name="checkin_h">चेक इन</string>
+    <string name="status_e">Today status</string>
+    <string name="status_h">स्थिति</string>
+    <string name="phone_no">+91 - </string>
+    <string name="email">abc@gmail.com</string>
+    <string name="beat_text">Beat/Chain of retailers</string>
+    <string name="dummydate">27</string>
+    <string name="dummymonth">September</string>
+    <string name="blanktext">-----</string>
+    <string name="sun">S</string>
+    <string name="mon">M</string>
+    <string name="tue">T</string>
+    <string name="wed">W</string>
+    <string name="thu">T</string>
+    <string name="fri">F</string>
+    <string name="sat">S</string>
+    <string name="colon">:</string>
+    <string name="checkintime">Check In Time</string>
+    <string name="checkouttime">Check Out Time</string>
+    <string name="tc">Total Call</string>
+    <string name="pc">Productive Call</string>
+    <string name="ls">Lines Sold</string>
+    <string name="distributor">Distributor</string>
+    <string name="kg">/ Kg</string>
+    <string name="sku">SKU\'s Name</string>
+    <string name="brandname">Brand Name</string>
+    <string name="price">Price</string>
+    <string name="qnty">Qnty</string>
+    <string name="unit">Unit</string>
+    <string name="orderconfirm">Order Confirmation</string>
+    <string name="towncity">Town/City</string>
+    <string name="knowmore">Know More</string>
+    <string name="takeorder">Take An Order</string>
+    <string name="addtoskulist">Add to sku list</string>
+    <string name="addtoorderlist">Add to order list</string>
+    <string name="stockkeeping">Opening Stock</string>
+    <string name="distributorreport_e">Your Opinion about distributor* : </string>
+    <string name="distributorreport_h">डिस्ट्रीब्यूटर के बारे में आपकी राय* :</string>
+    <string name="distributorsfeedback_e">Distributor\'s Feedback</string>
+    <string name="distributorsfeedback_h">Distributor\'s Feedback</string>
+    <string name="nameofcmny_e">Name of Firm/फर्म का नाम* : </string>
+    <string name="nameofcmny_h">फर्म का नाम : </string>
+    <string name="ownername_eh">Owner Name/मालिक का नाम* : </string>
+    <string name="ownername_h">मालिक का नाम :</string>
+    <string name="nameofcontactprsn_e">Name of Contact Person</string>
+    <string name="nameofcontactprsn_h">Name of Contact Person</string>
+    <string name="phn_eh">Mobile Number/मोबाइल नंबर* : </string>
+    <string name="phn_h">मोबाइल नंबर</string>
+    <string name="emailtxt_eh">Owner E-Mail/मालिक ई-मेल : </string>
+    <string name="emailtxt_h">मालिक ई-मेल</string>
+    <string name="address_e">Company/Firm Address* : </string>
+    <string name="address_h">कंपनी फर्म का पता* : </string>
+    <string name="totlanoofemp_e">Total No of Employee : </string>
+    <string name="totlanoofemp_h">कर्मचारियों की कुल संख्या : </string>
+    <string name="salesprsn_e">Sales Person/सेल्समेन :</string>
+    <string name="admin_e">Admin/एडमिन :</string>
+    <string name="ifyesnoofvehicle_e">If Yes.No Of Vehicle : </string>
+    <string name="ifyesnoofvehicle_h">अगर हाँ। गाड़ियों की कुल संख्या : </string>
+    <string name="deliveryvehicle_eh">Delivery Vehicle/डिलीवरी गाड़ी* : </string>
+    <string name="beatmarketetc_e">Beat/market/area name : </string>
+    <string name="beatmarketetc_h">बीट/बाजार/एरिया का नाम* : </string>
+    <string name="noofshopinbeatetc_e">No of shop in 1 beat in this area : </string>
+    <string name="noofshopinbeatetc_h">एक बीट में कितनी दुकानें हैं  : </string>
+    <string name="addmore">Add More/और जोडें</string>
+    <string name="noofshopgumticovered_e">No of shop and gumti covered : </string>
+    <string name="noofshopgumticovered_h">कितने दुकान और गुमटी आपके अंतर्गत आती है  : </string>
+    <string name="totalnoofshopgumti_e">Total no of shop and gumti available : </string>
+    <string name="totalnoofshopgumti_h">कुल कितने दुकान और गुमटी उपलब्ध : </string>
+    <string name="totalnoofwholesaler_e">Total number of wholesaler : </string>
+    <string name="totalnoofwholesaler_h">कुल होल सेलर की संख्या : </string>
+    <string name="investmentplan_e">Investment plan/amount : </string>
+    <string name="investmentplan_h">निवेश योजना /रकम : </string>
+    <string name="productiondivision_e">Product Division : </string>
+    <string name="productiondivision_h">किस प्रोडक्ट पे काम करना चाहेंगे : </string>
+    <string name="monthlysaleestimate_e">Monthly sale estimate : </string>
+    <string name="monthlysaleestimate_h">अनुमानित मासिक सेल : </string>
+    <string name="distributortype_e">Distributor Type* : </string>
+    <string name="distributortype_h">डिस्ट्रीब्यूटर टाइप*  : </string>
+    <string name="subdistributor">Sub Distributor Senior Name : </string>
+    <string name="workinbrand_e">Working Brand : </string>
+    <string name="workinbrand_h">इन में से किस ब्रांड पर काम कर रहे हैं : </string>
+    <string name="workingsince_e">Working Since/इस काम में कब से है* : </string>
+    <string name="workingsince_h">इस काम में कब से है : </string>
+    <string name="otherprsnname_e">OTHER CONTACT PERSON NAME :</string>
+    <string name="otherprsnname_h">किसी अन्य व्यक्ति का नाम :</string>
+    <string name="otherbrndname_h">"Other Brands Distribution" | अन्य ब्रांड डिस्ट्रीब्यूशन</string>
+    <string name="otherprsnphn_e">OTHER CONTACT PERSON NUMBER :</string>
+    <string name="otherprsnphn_h">किसी अन्य व्यक्ति का नंबर :</string>
+    <string name="streetroad_e">Road / Street / Lane / Post Office</string>
+    <string name="streetroad_h">Road / Street / Lane / Post Office</string>
+    <string name="areataluka_e">Area / Locality / Taluka/ Sub-Division</string>
+    <string name="areataluka_h">Area / Locality / Taluka/ Sub-Division</string>
+    <string name="towncity_e">Town / City / District* : </string>
+    <string name="towncity_h">क़स्बा/शहर/जिला* : </string>
+    <string name="state_eh">State/राज्य* : </string>
+    <string name="state_h">राज्य : </string>
+    <string name="pincodezip_e">Pincode/Zip Code* : </string>
+    <string name="pincodezip_h">पिनकोड/ज़िपकोड* : </string>
+    <string name="gstin_eh">GSTIN :</string>
+    <string name="fsinno_eh">FSSAI Reg No/License No.: </string>
+    <string name="panno">PAN No/पैन नंबर : </string>
+    <string name="currentdistributorship_e">Current Distributor Ship</string>
+    <string name="currentdistributorship_h">Current Distributor Ship</string>
+    <string name="monthlyturnover_eh">Monthly Turnover/मासिक आय : </string>
+    <string name="monthlyturnover_h">Monthly Turnover</string>
+    <string name="yearofcommen_e">Year of Commencement</string>
+    <string name="yearofcommen_h">Year of Commencement</string>
+    <string name="remarkscomment_e">Remarks/Comment(about distributor)(डिस्ट्रीब्यूटर के बारे में)*</string>
+    <string name="remarkscomment_h">Remarks/Comment</string>
+    <string name="distributorvisitwith_e">Distributor Visit With</string>
+    <string name="ownerfirmimage_e">Owner/Firm Image</string>
+    <string name="ownerfirmimage_h">Owner/Firm Image</string>
+    <string name="best_e">Best</string>
+    <string name="best_h">Best</string>
+    <string name="good_e">Good</string>
+    <string name="good_h">Good</string>
+    <string name="average_e">Average</string>
+    <string name="average_h">Average</string>
+    <string name="fresher_e">Fresher</string>
+    <string name="fresher_h">Fresher</string>
+    <string name="interested_e">Interested</string>
+    <string name="interested_h">Interested</string>
+    <string name="notinterested_e">Not Interested</string>
+    <string name="notinterested_h">Not Interested</string>
+    <string name="waiting_e">Waiting</string>
+    <string name="waiting_h">Waiting</string>
+    <string name="unitt">Kg</string>
+    <string name="Rs">\u20B9</string>
+    <string name="menu">Menu</string>
+    <string name="online">Available</string>
+    <string name="offline">Offline</string>
+    <string name="pretailer">onPreferredShop</string>
+    <string name="reviseOrder">revise order</string>
+    <string name="preferredRetOrder">preferred order</string>
+    <string name="preferredRetNoOrder">preferred no order</string>
+    <string name="reqNOrdered">Requested and Ordered</string>
+    <string name="reqNoOrdered">Requested without order</string>
+
+    <string name="dis_id_key_noti">distributor_id_noti</string>
+    <string name="dis_name_key_noti">distributorName_noti</string>
+
+    <!--Messages-->
+    <string name="plschooselang">Please choose your language/कृपया अपनी भाषा का चयन करें</string>
+    <string name="kripyaapnibhasa">कृपया अपनी भाषा का चयन करें </string>
+    <string name="internetUnavailableMsg">You are not connected to internet</string>
+    <string name="authenticationMsg">You are not authorized</string>
+    <string name="usernamepasswordMsg">username or password incorrect</string>
+    <string name="inputUsernamePasswordMsg">Please input username and password</string>
+    <string name="incorrectpin">Incorrect pin</string>
+    <string name="gpsAlertMsg">Your GPS seems to be disabled, do you want to enable it?</string>
+    <string name="gpsAlertMsg_h">क्या आपने जी पी एस बंद किया हुआ है ? अगर हाँ तो इसे चालू करें।</string>
+    <string name="norecordfound">No record found</string>
+    <string name="timechangeMsg">You have changed system time</string>
+    <string name="timechangeMsg_h">क्या आपने फ़ोन का समय बदला है ?</string>
+    <string name="douwanttocheckout">Do you really want to check out?</string>
+    <string name="douwanttocheckout_h">क्या आप चेक आउट करना चाहते हैं ?</string>
+    <string name="thankyounote">Thanks for giving your valuable time/आपका कीमती समय देने के लिए धन्यवाद</string>
+
+    <!--Key values-->
+    <string name="apikey">JG7840DFNSH20NJ57SN38JF8</string>
+    <string name="login_json">login_json</string>
+    <string name="internetUnavailablMsg">You are not connected to internet.Swipe to refresh</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">Sales beat</string>
+
+    <item name="required" type="id" />
+    <item name="field_id" type="id"/>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_fingerprint">One touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the sensor to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+    <string name="title_activity_home">Fingerprint</string>
+    <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
+    <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB738MyLrEegA5bWOq8yWlmrvco1BLSfu8</string>
+    <string name="recordaudio">recordAudio</string>
+</resources>
+
+

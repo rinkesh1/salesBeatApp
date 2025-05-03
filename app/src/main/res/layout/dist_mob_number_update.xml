@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center|left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Enter Distributor Mobile Number To Update"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edtNobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Enter mobile number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="25dp"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorAccent" />
+
+
+    <LinearLayout
+        android:id="@+id/llSubmitDistMob"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Submit"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

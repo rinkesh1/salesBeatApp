@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="New Feature Added"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothambook"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="New feature added in this version.Let's check it out."
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:text="No"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonTheme" />
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:theme="@style/ButtonTheme" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center|top"
+        android:background="@drawable/circle_primary_color"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_new_releases_black_24dp"
+        android:tint="@color/colorAccent" />
+
+</FrameLayout>

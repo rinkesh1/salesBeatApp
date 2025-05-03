@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="204dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5">
+
+            <com.newsalesbeatApp.customview.CircularNetworkImageView
+                android:id="@+id/person_thumb"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/men_placeholder" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/distrebutorIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/person_thumb"
+                android:background="@color/material_light_hint_text"
+                android:text="A"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:visibility="gone"
+                app:myfont="GothamMedium.otf" />
+
+            <TextView
+                android:id="@+id/tvDistrebuterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/infoIcon"
+                android:layout_toEndOf="@id/person_thumb"
+                android:ellipsize="end"
+                android:fontFamily="@font/gothammedium"
+                android:maxLines="1"
+                android:text="Cambodia Agency"
+                android:textColor="@color/black_shade"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvDistrebuterName"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_toStartOf="@id/nextIcon"
+                android:layout_toEndOf="@id/person_thumb">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tarText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="TAR"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/achText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="ACH"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <com.newsalesbeatApp.customview.HorizontalStackBarChartView2
+                    android:id="@+id/barChartSale"
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvVal1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="00"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvVal2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="00"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/infoIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_info_fill" />
+
+            <ImageView
+                android:id="@+id/nextIcon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="14dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_keyboard_arrow_right_black_48dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/black" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="4.5"
+            android:gravity="center_vertical"
+            android:stretchColumns="0,1,2">
+
+            <TableRow>
+
+                <RelativeLayout
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_back_round">
+
+                    <ImageView
+                        android:id="@+id/locationIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_location_on_black_24dp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/black_shade" />
+
+                    <ImageView
+                        android:id="@+id/callIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_local_phone_black_24dp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/tvOrderHistory"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_back_round"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Order History"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/tvStockHistory"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_back_round"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Stock History"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="6dp">
+
+                <Button
+                    android:id="@+id/tvPartyOutstanding"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_back_round"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="View Bills"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <RelativeLayout
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp">
+
+                    <Button
+                        android:id="@+id/tvDisBookOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_back_round"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Book Order"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/tvDisReviseOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_back_round"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Revise Order"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_height="36dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp">
+
+                    <Button
+                        android:id="@+id/tvStockCapture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_back_round"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Stock Capture"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/tvReviseStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_back_round"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Revise Stock"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

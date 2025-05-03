@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/textColor"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".25"
+        android:orientation="vertical">
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/tvOrderTakenDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="end"
+            android:paddingLeft="15dp"
+            android:paddingTop="1dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="1dp"
+            android:text="12March"
+            android:textColor="@color/material_light_active_icon"
+            app:myfont="GothamMedium.otf" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".1">
+
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/material_light_hint_text" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circle_with_redborder" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".65"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvApprovedExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.350"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="16sp"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="Rs.400"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:myfont="GothamMedium.otf" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Claim Type :"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvClaimType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settled :"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvSettled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Da Type" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":" />
+
+
+            <TextView
+                android:id="@+id/tvDaType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<com.salesbeat.customview.CustomTextView-->
+        <!--android:text="Expense :"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:gothambook="gothammediumf.otf"/>-->
+
+
+        <!--<com.salesbeat.customview.CustomTextView-->
+        <!--android:id="@+id/tvExpense"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:paddingLeft="2dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:gothambook="gothamlightf.otf"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<com.salesbeat.customview.CustomTextView-->
+        <!--android:text="Approved Expense :"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:gothambook="gothammediumf.otf"/>-->
+
+
+        <!--<com.salesbeat.customview.CustomTextView-->
+        <!--android:id="@+id/tvApprovedExpense"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:paddingLeft="2dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:gothambook="gothamlightf.otf"/>-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/llOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From :"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Destination :"
+                app:myfont="GothamMedium.otf" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llKmsTravel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kms Travel :"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvKmsTravel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks :"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvRemarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorAccent"
+            android:visibility="visible">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvApproved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/textColor"
+                android:gravity="center"
+                android:text="Pending"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                app:myfont="GothamMedium.otf" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

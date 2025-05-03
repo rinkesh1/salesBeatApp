@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/textColor">
+
+        <TextView
+            android:id="@+id/tvSkuName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvSkuQty"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvSkuUnit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

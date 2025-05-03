@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Request sent"
+            android:textColor="@color/app_background" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothambook"
+            android:padding="10dp"
+            android:text="Your request for joint working has been sent to your colleague.Please wait until the request is accepted. " />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothambook"
+            android:padding="10dp"
+            android:text="We will update you soon!"
+            android:textAllCaps="true"
+            android:textColor="@color/red_like" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llOk"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?selectableItemBackgroundBorderless">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="Ok"
+            android:textAllCaps="true"
+            android:textColor="@color/app_background" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

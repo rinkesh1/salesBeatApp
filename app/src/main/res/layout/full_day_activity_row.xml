@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:text="Activity"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tvActivity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Joint working with JK Jain"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:text="Remarks"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tvRemarksO"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:text="Joint working with JK Jain"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llJwWith"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:text="JW With"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tvJWWith"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:text="Joint working with JK Jain"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

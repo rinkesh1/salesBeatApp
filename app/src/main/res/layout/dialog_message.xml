@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlMessage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/textColor"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:myfont="GothamMedium.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvUROn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="You are on :"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                app:myfont="GothamMedium.otf" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/border_rectangle"
+                android:orientation="vertical">
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Training"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    app:myfont="GothamBook.otf" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvRemarksM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Apart from Zoho Mail Workplace apps, there are umpteen other "
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    app:myfont="GothamBook.otf" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnOkMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:text="Ok"
+            android:textColor="@color/textColor" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDataList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Filter Data By"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imgBackFilter"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/leftarrow_white"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rdMonthly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monthly"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdQuartly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quartly"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdHalfYearly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Half Yearly"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdYearly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yearly"
+                android:theme="@style/MyCheckBox" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rdMtd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MTD"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdApril"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="April"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdMay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="May"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdJune"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="June"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdJuly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="July"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdAugust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="August"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdSeptember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="September"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdOctober"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="October"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdNovember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="November"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdDecember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="December"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdJanuary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="January"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdFabruary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="February"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdMarch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="March"
+                android:theme="@style/MyCheckBox" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rd3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rdQtd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QTD"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdFirstQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1st Quarter"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdSecondQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2nd Quarter"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdThirdQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3rd Quarter"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdFourthQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4th Quarter"
+                android:theme="@style/MyCheckBox" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rd4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rdFirstHalf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="April - September"
+                android:theme="@style/MyCheckBox" />
+
+            <RadioButton
+                android:id="@+id/rdSecondHalf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="October - March"
+                android:theme="@style/MyCheckBox" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmitFilter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:text="Submit"
+            android:textColor="@color/textColor"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvJointW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/textColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Joint working with :"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 1. Bharat Sharma \n2. AK Mansoori \n3.Jk Jain" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="REASON for joint working :"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvJWReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Reason :  nbjgnbjgnbgjnbgjnrgjn" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="REmarks about joint working :"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvJWRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Comments :  nbjgnbjgnbgjnbgjnrgjn" />
+
+
+            <Button
+                android:id="@+id/btnOkJW"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:text="Ok"
+                android:textColor="@color/textColor" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

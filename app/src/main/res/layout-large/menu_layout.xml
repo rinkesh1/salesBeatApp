@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scMyMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+            <!--<FrameLayout
+                android:id="@+id/crContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imgBackMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/prev_new"
+                        android:tint="@color/colorPrimary" />
+
+
+                    <com.newsalesbeatApp.customview.CustomTextView
+                        android:id="@+id/txtvMonthName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/blanktext"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        app:myfont="GothamMedium.otf" />
+
+
+                    <ImageView
+                        android:id="@+id/imgNextMonth"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/forward_new"
+                        android:tint="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llDayView"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/circle_primary_color"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/tvCurrentDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dummydate"
+                                android:textColor="@color/textColor"
+                                android:textSize="38sp"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/tvCurrentMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="@string/dummymonth"
+                                android:textColor="@color/textColor"
+                                android:textSize="18sp"
+                                app:myfont="GothamMedium.otf" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:weightSum="1.0">
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/sun"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/sun"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/mon"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/mon"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/tue"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/tue"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/wed"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/wed"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/thu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/thu"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/fri"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/fri"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:myfont="GothamMedium.otf" />
+
+                            <com.newsalesbeatApp.customview.CustomTextView
+                                android:id="@+id/sat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.14"
+                                android:gravity="center"
+                                android:text="@string/sat"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                app:myfont="GothamMedium.otf" />
+
+                        </LinearLayout>
+
+
+                        <GridView
+                            android:id="@+id/gridview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:numColumns="7"
+                            android:verticalSpacing="5dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:nestedScrollingEnabled="false" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

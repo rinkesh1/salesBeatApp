@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/TomTool"
+        layout="@layout/toolbar3" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvShareTomorrowDetails"
+        android:layout_below="@+id/TomTool"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Activity type"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowActivityType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Working town"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowWorkingTown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Working distributor"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowWorkingDistributor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Employee working with"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowEmpWorkingW"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Meeting type"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowMeetingType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:text="Comment"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/tvTomorrowComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="------"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvShareTomorrowDetails"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/gothammediumf"
+        android:gravity="center"
+        android:text="Share"
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

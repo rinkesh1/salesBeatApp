@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/updateRetailerRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/transparent_black"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="105dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_with_border" />
+
+            <com.newsalesbeatApp.customview.RoundedImageView
+                android:id="@+id/retailerImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/men_placeholder" />
+
+
+            <ProgressBar
+                android:id="@+id/proressBarImageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="75dp"
+                android:background="@drawable/circle_with_border">
+
+                <ImageView
+                    android:id="@+id/chaneImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_primary_color"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@android:color/white" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnUpdate"
+        android:layout_below="@+id/llProfile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:padding="10dp"
+                        android:text="Name"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".1"
+                        android:text="@string/colon"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvOwnerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".6"
+                        android:padding="10dp"
+                        android:text="------"
+                        android:textColor="@android:color/black"
+                        android:visibility="visible" />
+
+
+                    <EditText
+                        android:id="@+id/edtOwnerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight=".5"
+                        android:hint="Name"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/imgEditName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_edit_black_24dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/transparent_black" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:padding="10dp"
+                        android:text="Locality"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:text=":"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tvLocality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:padding="10dp"
+                        android:text="------"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Zone"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".6"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edtCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:hint="City"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditCity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="State"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".6"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edtState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:hint="State"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditState"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Latitude"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvLatitudeR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".6"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtLatitudeR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:editable="false"
+                    android:hint="Latitude"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgRefressLat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_refresh"
+                    android:tint="@color/colorPrimary" />
+                <TextView
+                    android:id="@+id/txtUpdateLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="update"
+                    android:textColor="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Longtitude"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvLongtitudeR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".6"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtLongtitudeR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:editable="false"
+                    android:hint="Longtitude"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imgRefressLong"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_refresh"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:id="@+id/llGrade"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Grade"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvGrade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtGrade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="Grade"
+                    android:maxLength="1"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditGrade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Target"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="Target"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="E-mail"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="Mail id"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditMailId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Mobile No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvMobileNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="0000000000"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtMobileNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="Mobile No"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditMobileNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="WhatsApp No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvWhatsAppNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtWhatsAppNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="WhatsApp No"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditWhatsAppNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="GSTIN No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvGstin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtGstin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="GSTIN"
+                    android:maxLength="15"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditGSTIN"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="FSSAI No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvFssaino"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtFssaino"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="FSSAI No"
+                    android:maxLength="14"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditFSSAINo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="PIN No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <EditText
+                    android:id="@+id/edtPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight=".5"
+                    android:hint="Pin No"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgEditPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:tint="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Shop Images"
+                android:textColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="2dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3">
+
+
+                    <ImageView
+                        android:id="@+id/shopImage6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder3" />
+
+                    <ImageView
+                        android:id="@+id/addShopImage6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_black"
+                        android:padding="30dp"
+                        android:src="@drawable/ic_add_circle_black_24dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnUpgradeToPreferred"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="1dp"
+            android:visibility="gone"
+            android:layout_weight=".5"
+            android:background="@color/colorAccent"
+            android:text="Upgrade to Preferred"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight=".5"
+            android:background="@color/colorAccent"
+            android:text="Update Info"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/retUpdateClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="15dp"
+        android:src="@drawable/closeicon"
+        android:tint="@color/white" />
+
+
+</RelativeLayout>

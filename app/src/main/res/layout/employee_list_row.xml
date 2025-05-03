@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/chbEmpName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/imgCall"
+        android:fontFamily="@font/gothambook"
+        android:text="test1"
+        android:textColor="@color/colorAccent"
+        android:theme="@style/MyCheckBox" />
+
+
+    <ImageView
+        android:id="@+id/imgCall"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        android:src="@drawable/ic_local_phone_black_24dp"
+        android:tint="@color/colorAccent" />
+
+
+</RelativeLayout>

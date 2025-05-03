@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background=" #f2f3f4 "
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scDialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="STATUS : "
+                        android:textAlignment="textEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="22sp"
+                        tools:text="PRESENT" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/check_card"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="CHECK IN TIME"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvCheckInTimeD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="12:00 PM" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="CHECK OUT TIME"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvCheckOutTimeD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="9:00 PM" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/activity_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="ACTIVITY :"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvFullDayActivity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothammedium"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/imgForwardOA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorAccent"
+                        android:fontFamily="@font/gothammedium"
+                        android:padding="6dp"
+                        android:text="Details"
+                        android:textColor="@color/textColor" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/call_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/total_call_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="TC"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvTotalCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/total_call_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="3" />
+
+                        <TextView
+                            android:id="@+id/imgForwardT"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/tvTotalCall"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/prod_call_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="PC"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductiveCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/prod_call_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="1" />
+
+                        <TextView
+                            android:id="@+id/imgForward"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/tvProductiveCall"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/new_counter_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="NC"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvNewCounter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/new_counter_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="2" />
+
+                        <TextView
+                            android:id="@+id/imgForwardNC"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@id/tvNewCounter"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/colorAccent"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Details"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/beat_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/beats_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="BEATS"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:id="@+id/line_beat"
+                        android:layout_width="200dp"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/beats_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_beat"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/gothamlight"
+                                android:text="Assigned"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/tvBeatAssigned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="6dp"
+                                android:fontFamily="@font/gothammedium"
+                                android:textColor="@android:color/black"
+                                tools:text="10" />
+
+                            <TextView
+                                android:id="@+id/imgForwardBA"
+                                android:layout_width="90dp"
+                                android:layout_height="20dp"
+                                android:layout_below="@id/tvBeatAssigned"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/colorAccent"
+                                android:fontFamily="@font/gothammedium"
+                                android:gravity="center"
+                                android:text="Details"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.8dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/darker_gray" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/gothamlight"
+                                android:text="Visited"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/tvBeatVisited"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="6dp"
+                                android:fontFamily="@font/gothammedium"
+                                android:textColor="@android:color/black"
+                                tools:text="4" />
+
+                            <TextView
+                                android:id="@+id/imgForwardBV"
+                                android:layout_width="90dp"
+                                android:layout_height="20dp"
+                                android:layout_below="@id/tvBeatVisited"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/colorAccent"
+                                android:fontFamily="@font/gothammedium"
+                                android:gravity="center"
+                                android:text="Details"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/call_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_beat"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="40dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/gothamlight"
+                                android:text="CC"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/tvCcall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="6dp"
+                                android:fontFamily="@font/gothammedium"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp"
+                                tools:text="10" />
+
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.8dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/darker_gray" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/gothamlight"
+                                android:text="WC"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/tvWcall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="6dp"
+                                android:fontFamily="@font/gothammedium"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp"
+                                tools:text="4" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reason_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="REASON :"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothammedium"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        tools:text="No reason" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lines_sold_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="LINES SOLD :"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvLineSold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothammedium"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/imgForwardL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorAccent"
+                        android:fontFamily="@font/gothammedium"
+                        android:padding="6dp"
+                        android:text="Details"
+                        android:textColor="@color/textColor" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ach_cardOld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/ic_star" />
+
+                    <TextView
+                        android:id="@+id/ach_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/gothamlight"
+                        android:text="ACHIEVEMENT"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvAchievement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ach_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        tools:text="4" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ach_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/target_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="TARGET"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/target_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="7" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_star" />
+                        <TextView
+                            android:id="@+id/ach_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="ACHIEVEMENT"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvAchievement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ach_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="3" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/target_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/sale_text_tea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="TEA"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvSaleTea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sale_text_tea"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="7KG" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/sale_text_match"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="MATCH"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvSaleMatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sale_text_match"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="3BDL" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/time_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="0dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/twh_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="TOTAL WORKING\n HOUR"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvTWH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/twh_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="0:45 hr" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/trt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="TOTAL RETAILING \nTIME"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tvTRT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/trt_text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            tools:text="4:45 hrs" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/llShowSummary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/gothammedium"
+        android:gravity="center"
+        android:text="SHOW SUMMARY"
+        android:textColor="@color/textColor"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/attend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:src="@drawable/ic_absent"
+        android:visibility="invisible" />
+
+</FrameLayout>

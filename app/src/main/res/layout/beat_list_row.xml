@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/linPar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlBeatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/beatMyIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/beatIcon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/gray_rectangle"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAllCaps="true"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:myfont="GothamMedium.otf" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#f8f8f8"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/llBeatName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/next2"
+                android:layout_toRightOf="@+id/beatMyIcon"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvBeatName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:myfont="GothamBook.otf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/next2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/nextIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_keyboard_arrow_right_black_48dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/app_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRetailerCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/gothammedium"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="0 Retailers"
+                        android:textColor="@color/colorAccent" />
+
+                    <!--<LinearLayout-->
+                    <!--android:background="@color/app_background"-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="match_parent"/>-->
+
+
+                    <!--<TextView-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Retailers"-->
+                    <!--android:textColor="@color/textColor"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:fontFamily="@font/gothammedium"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorAccent">
+
+                    <TextView
+                        android:id="@+id/tvRecap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Recap"
+                        android:textAllCaps="true"
+                        android:textColor="@color/textColor" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

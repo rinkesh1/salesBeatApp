@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llActList"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="1dp"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8">
+
+        <TextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"
+            android:text="-----"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:gravity="center">
+
+
+        <CheckBox
+            android:id="@+id/chbActSelect"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

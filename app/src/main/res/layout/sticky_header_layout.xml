@@ -1,0 +1,17 @@
+<!-- sticky_header_layout.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/material_light_hint_text">
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_light_primary_text"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="fill_parent"
+    android:layout_height="300dp"
+    android:background="@color/app_background">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerShopImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#99000000"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tvCurrentImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="10"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=" / "
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/tvTotalImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="40"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>--><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:orientation="vertical" android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:background="@android:color/white">-->
+
+
+    <!--<com.android.volley.toolbox.NetworkImageView--><!--android:id="@+id/retailerImageOri"--><!--android:src="@drawable/placeholder3"--><!--android:layout_width="match_parent"--><!--android:layout_height="300dp" />-->
+
+    <!--</LinearLayout>-->

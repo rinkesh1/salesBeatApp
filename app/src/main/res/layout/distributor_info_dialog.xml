@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/disT"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/transparent_black"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/imgDisClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:src="@drawable/closeicon" />
+
+        <com.newsalesbeatApp.customview.RoundedImageView
+            android:id="@+id/retailerImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/men_placeholder" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/distLT"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/disT"
+        android:background="@color/transparent_black"
+        android:orientation="horizontal" />
+
+
+    <ScrollView
+        android:id="@+id/distSCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llUpdateDistMob"
+        android:layout_below="@+id/distLT">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Name"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!--<EditText
+                    android:id="@+id/edtDisName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:hint="Name"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgDisName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="8dp"
+                    android:src="@drawable/edit_icon" />
+-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Type"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!-- <EditText
+                     android:id="@+id/edtDisType"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight=".5"
+                     android:hint="Name"
+                     android:padding="10dp"
+                     android:singleLine="true"
+                     android:textColor="@android:color/black"
+                     android:visibility="gone" />
+
+
+                 <ImageView
+                     android:id="@+id/imgDisType"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight=".1"
+                     android:padding="8dp"
+                     android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Address"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!-- <EditText
+                     android:id="@+id/edtDisAddress"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight=".5"
+                     android:hint="Name"
+                     android:padding="10dp"
+                     android:singleLine="true"
+                     android:textColor="@android:color/black"
+                     android:visibility="gone" />
+
+
+                 <ImageView
+                     android:id="@+id/imgDisAddress"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight=".1"
+                     android:padding="8dp"
+                     android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="GST Number"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisGSTIN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="-----"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!-- <EditText
+                     android:id="@+id/edtDisAddress"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight=".5"
+                     android:hint="Name"
+                     android:padding="10dp"
+                     android:singleLine="true"
+                     android:textColor="@android:color/black"
+                     android:visibility="gone" />
+ 
+ 
+                 <ImageView
+                     android:id="@+id/imgDisAddress"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight=".1"
+                     android:padding="8dp"
+                     android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Zone"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisZone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+                <!--   <EditText
+                       android:id="@+id/edtDisZone"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:layout_weight=".5"
+                       android:hint="City"
+                       android:padding="10dp"
+                       android:singleLine="true"
+                       android:textColor="@android:color/black"
+                       android:visibility="gone" />
+
+
+                   <ImageView
+                       android:id="@+id/imgDisZone"
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight=".1"
+                       android:padding="8dp"
+                       android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="District"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisDistrict"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+                <!-- <EditText
+                     android:id="@+id/edtDisDistrict"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight=".5"
+                     android:hint="State"
+                     android:padding="10dp"
+                     android:singleLine="true"
+                     android:textColor="@android:color/black"
+                     android:visibility="gone" />
+
+
+                 <ImageView
+                     android:id="@+id/imgDisDistrict"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight=".1"
+                     android:padding="8dp"
+                     android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="State"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+                <!--   <EditText
+                       android:id="@+id/edtDisState"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:layout_weight=".5"
+                       android:hint="State"
+                       android:padding="10dp"
+                       android:singleLine="true"
+                       android:textColor="@android:color/black"
+                       android:visibility="gone" />
+
+
+                   <ImageView
+                       android:id="@+id/imgDisState"
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight=".1"
+                       android:padding="8dp"
+                       android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="E-mail"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!--      <EditText
+                          android:id="@+id/edtDisEmail"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:layout_weight=".5"
+                          android:hint="E-mail id"
+                          android:padding="10dp"
+                          android:singleLine="true"
+                          android:textColor="@android:color/black"
+                          android:visibility="gone" />
+
+
+                      <ImageView
+                          android:id="@+id/imgDisEmail"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight=".1"
+                          android:padding="8dp"
+                          android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Phone No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisPhoneNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!-- <EditText
+                     android:id="@+id/edtDisPhoneNo"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="5dp"
+                     android:layout_weight=".5"
+                     android:hint="Market Name"
+                     android:padding="10dp"
+                     android:singleLine="true"
+                     android:textColor="@android:color/black"
+                     android:visibility="gone" />
+
+
+                 <ImageView
+                     android:id="@+id/imgDisPhoneNo"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight=".1"
+                     android:padding="8dp"
+                     android:src="@drawable/edit_icon" />-->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="PIN No"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!--<EditText
+                    android:id="@+id/edtDisPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:hint="Pin No"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/imgDisPinNo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:padding="8dp"
+                    android:src="@drawable/edit_icon" />
+-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Latitude"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisLatitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!--  <EditText
+                      android:id="@+id/edtDisLatitude"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="5dp"
+                      android:layout_weight=".5"
+                      android:editable="false"
+                      android:hint="Latitude"
+                      android:padding="10dp"
+                      android:singleLine="true"
+                      android:textColor="@android:color/black"
+                      android:visibility="gone" />
+  -->
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".3"
+                    android:padding="10dp"
+                    android:text="Longtitude"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".1"
+                    android:padding="10dp"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvDisLongtitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+                <!--      <EditText
+                          android:id="@+id/edtDisLongtitude"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="5dp"
+                          android:layout_weight=".5"
+                          android:editable="false"
+                          android:hint="Longtitude"
+                          android:padding="10dp"
+                          android:singleLine="true"
+                          android:textColor="@android:color/black"
+                          android:visibility="gone" />-->
+
+
+            </LinearLayout>
+
+
+            <!--   <Button
+                   android:id="@+id/btnUpdate"
+                   android:layout_width="match_parent"
+                   android:layout_height="55dp"
+                   android:background="@color/colorPrimary"
+                   android:text="Update"
+                   android:textColor="@color/textColor" />
+   -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/llUpdateDistMob"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/tvUpdateDistMob"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Update Mobile number"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

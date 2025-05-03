@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSplash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_pagebackground"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--   <pl.droidsonroids.gif.GifImageView
+           android:src="@drawable/original"
+           android:scaleType="fitXY"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_vector_0" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="250dp"
+        android:src="@drawable/ic_vector_2" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circlewhite"
+            android:padding="10dp"
+            android:src="@drawable/logoremovebg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gothammedium"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <!-- <LinearLayout
+             android:background="@color/app_background"
+             android:layout_width="100dp"
+             android:layout_height="1dp"/>-->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

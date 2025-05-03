@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="8dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".15"
+                    android:background="?android:selectableItemBackground"
+                    android:padding="5dp"
+                    android:src="@drawable/leftarrow_white" />
+
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".65"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:myfont="GothamMedium.otf" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarPrimarySaleHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:minHeight="?android:attr/actionBarSize" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_ripple_light"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTotalTarget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="0 kg"
+                android:textColor="@color/colorPrimaryDarkk"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTotalAch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="0 kg"
+                android:textColor="@color/colorPrimaryDarkk"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tvPercentageOfTotal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0%"
+                android:textColor="@color/colorPrimaryDarkk"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Target"
+                android:textColor="@color/colorPrimaryDarkk" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Achievement"
+                android:textColor="@color/colorPrimaryDarkk" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Percentage"
+                android:textColor="@color/colorPrimaryDarkk" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/material_light_hint_text"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPrimarySaleHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/tvNoDataPrimarySale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/gothammedium"
+        android:gravity="center"
+        android:text="No Data"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolB"
+        layout="@layout/toolbar3" />
+
+
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolB"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/blanktext"
+        android:textColor="@color/textColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStartDate"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/material_light_hint_text"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tvEmp1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|left"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imgCallJW"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/ic_local_phone_black_24dp"
+                android:tint="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/material_light_hint_text"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="Jointworking reason :" />
+
+            <TextView
+                android:id="@+id/tvReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothamlight"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/material_light_hint_text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@color/red_like"
+            android:text="Reject"
+            android:textColor="@color/app_background"
+            android:theme="@style/ButtonGray" />
+
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@color/colorAccent"
+            android:text="Accept"
+            android:textColor="@color/app_background"
+            android:theme="@style/ButtonGray" />
+
+    </LinearLayout>
+
+</RelativeLayout>

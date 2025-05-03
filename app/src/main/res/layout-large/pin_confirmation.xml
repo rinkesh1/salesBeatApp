@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_pagebackground"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_vector_0" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="250dp"
+        android:src="@drawable/ic_vector_2" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pinSetUpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/cmnyLogo"
+                android:layout_width="225dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/tvCmnyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="80dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/inputPin1"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/white_circle"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/inputPin2"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/white_circle" />
+
+                <ImageView
+                    android:id="@+id/inputPin3"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/white_circle" />
+
+                <ImageView
+                    android:id="@+id/inputPin4"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/white_circle" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Confirm Pin To Login"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvOne"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvThree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvFour"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvFive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvSix"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvSeven"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvEight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvNine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tvDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <TextView
+                    android:id="@+id/tvZero"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp" />
+
+
+                <ImageView
+                    android:id="@+id/imgBackSpace"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="15dp"
+                    android:src="@drawable/leftarrow_white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:background="@color/material_ripple_light"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"/>-->
+
+        <TextView
+            android:id="@+id/tvGoBack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#461584"
+            android:gravity="center"
+            android:text="Go back pin setup"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+</RelativeLayout>

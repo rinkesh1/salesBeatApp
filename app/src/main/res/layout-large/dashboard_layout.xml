@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                app:cardBackgroundColor="@android:color/white">
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:williamchart="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/textColor"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gothambook"
+                            android:gravity="center"
+                            android:text="Leaderboard"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/imgHistory"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:background="?selectableItemBackgroundBorderless"-->
+                        <!--android:padding="2dp"-->
+                        <!--android:src="@drawable/ic_history_black_24dp"-->
+                        <!--android:tint="@color/colorPrimary"-->
+                        <!--android:visibility="visible"/>-->
+
+                        <Button
+                            android:id="@+id/btnHistory"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_rectangle"
+                            android:fontFamily="@font/gothambook"
+                            android:text="Info"
+                            android:textColor="@color/colorAccent" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="205dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false">
+
+
+                        <!--<com.db.chart.view.BarChartView-->
+                        <!--android:visibility="gone"-->
+                        <!--android:id="@+id/barChart1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--williamchart:chart_axis="false"-->
+                        <!--williamchart:chart_barBackgroundColor="@color/material_ripple_light"-->
+                        <!--williamchart:chart_axisBorderSpacing="5dp"-->
+                        <!--williamchart:chart_barSpacing="80dp"-->
+                        <!--williamchart:chart_cornerRadius="20dp"-->
+                        <!--williamchart:chart_labels="none"-->
+                        <!--/>-->
+
+                        <!--<com.db.chart.view.BarChartView-->
+                        <!--android:visibility="gone"-->
+                        <!--android:id="@+id/barChart2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--williamchart:chart_axis="false"-->
+                        <!--williamchart:chart_barBackgroundColor="@color/material_ripple_light"-->
+                        <!--williamchart:chart_axisBorderSpacing="5dp"-->
+                        <!--williamchart:chart_barSpacing="80dp"-->
+                        <!--williamchart:chart_cornerRadius="20dp"-->
+                        <!--williamchart:chart_labels="none"-->
+                        <!--/>-->
+
+
+                        <com.newsalesbeatApp.customview.BarChartView
+                            android:id="@+id/barChart3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            williamchart:chart_axis="false"
+                            williamchart:chart_axisBorderSpacing="5dp"
+                            williamchart:chart_barBackgroundColor="@color/material_ripple_light"
+                            williamchart:chart_barSpacing="80dp"
+                            williamchart:chart_cornerRadius="5dp"
+                            williamchart:chart_labels="none" />
+
+
+                        <TextView
+                            android:id="@+id/tvNoInternet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlFront"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:id="@+id/empPic1"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/men_placeholder" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlBack"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true" />
+
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/val1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/emp1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:id="@+id/empPic2"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/men_placeholder" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/val2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/emp2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:id="@+id/empPic3"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/men_placeholder" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/val3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                            <TextView
+                                android:id="@+id/emp3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:id="@+id/empPic4"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/men_placeholder" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/val4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/emp4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circleback_gray" />
+
+                                <com.newsalesbeatApp.customview.RoundedImageView
+                                    android:id="@+id/empPic5"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_white"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/men_placeholder" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/val5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                            <TextView
+                                android:id="@+id/emp5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="----"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@android:color/white">
+
+
+                <LinearLayout
+                    android:id="@+id/llCurrentStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="@string/status_e"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvAttendanceStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:singleLine="true"
+                            android:text="@string/blanktext"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            app:myfont="GothamMedium.otf" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llActType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="Activity type"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvActType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:singleLine="true"
+                            android:text="@string/blanktext"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llCheckIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="@string/checkin_e"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvCheckInTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:singleLine="true"
+                            android:text="@string/blanktext"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="@string/checkout_e"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvCheckOutTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:singleLine="true"
+                            android:text="@string/blanktext"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            android:visibility="visible"
+                            app:myfont="GothamLight.otf" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="Total Working"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvTimer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/blanktext"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="Working Town"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/transparent_black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvWorkingTown"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".4"
+                            android:text="@string/blanktext"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            app:myfont="GothamLight.otf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="10dp">
+
+                        <Button
+                            android:id="@+id/btnChekOut"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Finish Working"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:drawableStart="@drawable/ic_update"
+                            android:padding="10dp"
+                            android:drawablePadding="8dp"
+                            android:theme="@style/ButtonTheme2" />
+
+                        <Button
+                            android:id="@+id/btnBookOrder"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center"
+                            android:text="Book Order"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:drawableStart="@drawable/ic_update"
+                            android:padding="10dp"
+                            android:drawablePadding="8dp"
+                            android:theme="@style/ButtonTheme" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llShareStartWorkingSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnShareStartWorkingSummary"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothambook"
+                            android:gravity="center"
+                            android:text="Share start working summary"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:theme="@style/ButtonThemeY" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llTodaysSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnTodaysSummary"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothambook"
+                            android:gravity="center"
+                            android:text="Show Today's summary"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:theme="@style/ButtonThemeY" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llShareReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+
+                        <Button
+                            android:id="@+id/btnShareClaim"
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="Claim Expenses"
+                            android:textColor="@color/app_background"
+                            android:drawableStart="@drawable/ic_update"
+                            android:padding="10dp"
+                            android:drawablePadding="8dp"
+                            android:theme="@style/ButtonTheme" />
+
+                        <Button
+                            android:id="@+id/btnTomorrowsPlan"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothambook"
+                            android:text="Tomorrow's Plan"
+                            android:textColor="@color/app_background"
+                            android:drawableStart="@drawable/ic_update"
+                            android:padding="10dp"
+                            android:drawablePadding="8dp"
+                            android:theme="@style/ButtonTheme"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btnShareSummary"
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/gothamlight"
+                            android:text="Share Summary"
+                            android:drawableStart="@drawable/ic_update"
+                            android:padding="10dp"
+                            android:drawablePadding="8dp"
+                            android:textColor="@color/app_background"
+                            android:theme="@style/ButtonTheme" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llMarkAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnStartDay"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Start Working"
+                        android:textColor="@color/app_background"
+                        android:drawableStart="@drawable/ic_update"
+                        android:padding="10dp"
+                        android:drawablePadding="8dp"
+                        android:theme="@style/ButtonTheme" />
+
+                    <Button
+                        android:id="@+id/btnApplyLeave"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Leave/Holiday"
+                        android:drawableStart="@drawable/ic_update"
+                        android:padding="10dp"
+                        android:drawablePadding="8dp"
+                        android:textColor="@color/app_background"
+                        android:theme="@style/ButtonTheme2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvLeaveReasonTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="You are on leave"
+                        android:textColor="#E81C1C"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvLeaveReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="#E81C1C"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/empPerformanceViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/campaignLoader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/noCampaignView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/no_camp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/errorLoading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/error"
+                    android:visibility="gone" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/promotionViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="270dp" >-->
+
+            <!--<android.support.v4.view.ViewPager-->
+            <!--android:id="@+id/pager"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_alignParentTop="true" />-->
+
+            <!--&lt;!&ndash; <com.viewpagerindicator.CirclePageIndicator-->
+            <!--android:id="@+id/indicator"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:gravity="bottom"-->
+            <!--android:padding="10dip"-->
+            <!--app:centered="true"-->
+            <!--app:fillColor="#df0623"-->
+            <!--app:pageColor="#fff"-->
+            <!--app:snap="false" />&ndash;&gt;-->
+            <!--</RelativeLayout>-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/overlayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:background="#dd000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:background="#dd000000">
+
+                <Button
+                    android:id="@+id/btnOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rectangle_border_white"
+                    android:text="Next"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

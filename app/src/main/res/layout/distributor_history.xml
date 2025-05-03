@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/disHisRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textColor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarDistributorHistoryDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:minHeight="?android:attr/actionBarSize" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/app_background"
+                android:gravity="center"
+                android:text="Pull to refresh"
+                android:textColor="@color/colorPrimary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDistributorHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tvNoDataDisHis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="NO DATA"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+
+            <ProgressBar
+                android:id="@+id/pbDisHis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="160dp" />
+
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

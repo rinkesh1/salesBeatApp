@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/textColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#444444"
+        android:orientation="horizontal">
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:padding="15dp"
+            android:text="PJP Assigned to you"
+            android:textColor="@color/textColor"
+            app:myfont="GothamMedium.otf" />
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/tvSelectedView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:text="-----"
+            android:textColor="@color/textColor"
+            app:myfont="GothamMedium.otf" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#484848" />
+
+    <LinearLayout
+        android:id="@+id/llPjpDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:padding="15dp"
+                android:text="Assigned By"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvAssineeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:padding="10dp"
+                android:text="--------"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:padding="15dp"
+                android:text="Town Name"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvTownName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:padding="10dp"
+                android:text="Bhinmal"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:padding="15dp"
+                android:text="Distributor"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvDistributorName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:padding="10dp"
+                android:text="Chamunda Distritor"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:padding="15dp"
+                android:text="Beat Name"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:text=":"
+                android:textColor="@color/colorPrimary" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvBeatName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:padding="10dp"
+                android:text="Main Market Bhinmal"
+                android:textColor="@color/colorPrimary"
+                app:myfont="GothamLight.otf" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tvOkMyPjp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="OK"
+                android:textColor="@color/textColor" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

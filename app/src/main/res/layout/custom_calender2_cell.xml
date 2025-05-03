@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+
+    <!-- <LinearLayout
+         android:visibility="gone"
+         android:layout_margin="2dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/tvAssigneeEmp"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp" />
+
+
+     </LinearLayout>
+
+
+     <LinearLayout
+         android:id="@+id/llTW"
+         android:visibility="gone"
+         android:layout_margin="2dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/tvTownName"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp"
+             android:elevation="2dp"/>
+
+
+     </LinearLayout>
+
+
+     <LinearLayout
+         android:id="@+id/llDSTN"
+         android:visibility="gone"
+         android:orientation="vertical"
+         android:layout_margin="2dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/tvDistributorName"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp"
+             android:elevation="2dp"/>
+
+
+         <TextView
+             android:id="@+id/tvDistributorIdPJP"
+             android:visibility="visible"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp"
+             android:elevation="2dp"/>
+
+
+     </LinearLayout>
+
+
+     <LinearLayout
+         android:id="@+id/llBTN"
+         android:visibility="gone"
+         android:orientation="vertical"
+         android:layout_margin="2dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/tvBeatName"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp"
+             android:elevation="2dp"/>
+
+         <TextView
+             android:id="@+id/tvBeatIDPJP"
+             android:visibility="gone"
+             android:singleLine="true"
+             android:padding="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:gravity="center|start"
+             android:textColor="@android:color/white"
+             android:textSize="12sp"
+             android:elevation="2dp"/>
+
+
+     </LinearLayout>
+ -->
+    <LinearLayout
+        android:id="@+id/llCal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:text="@string/dummydate"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:myfont="GothamMedium.otf" />
+
+        <ImageView
+            android:id="@+id/imgDot"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:background="@drawable/circle_back_green"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

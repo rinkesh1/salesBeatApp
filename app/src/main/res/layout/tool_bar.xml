@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:elevation="8dp"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:background="?android:selectableItemBackground"
+                android:padding="8dp"
+                android:src="@drawable/leftarrow_white" />
+
+            <RelativeLayout
+                android:id="@+id/rlImg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_with_border" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/userPic"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_back_red"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:text="T"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:myfont="GothamMedium.otf" />
+
+
+            </RelativeLayout>
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/pageTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".70"
+                android:gravity="center|left"
+                android:maxLines="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:myfont="GothamMedium.otf" />
+
+            <CheckBox
+                android:id="@+id/chkOtherTownList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:text="Other"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:myfont="GothamMedium.otf"
+                android:textColor="@android:color/white"
+                android:background="?android:selectableItemBackground" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>
+

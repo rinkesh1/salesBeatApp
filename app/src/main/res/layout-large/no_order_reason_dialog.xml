@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/stockAvl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Stock Available"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/shopClosed"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Shop closed"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/competitorPriceLow"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Competitor Price Low"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/competitorSchemeBetter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Competitor Scheme Better"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/delayIrregularSupply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Delay/Irregular Supply"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/directOrderPlaced"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Direct Order Placed to Distributor"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/keyPersonNotAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Key Person Not Available"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/lowRetailerMargin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Low Retailer Margin"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <RadioButton
+                android:id="@+id/lowShelfOffTake"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Low Shelf Off Take"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <RadioButton
+                android:id="@+id/noCustomerA"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="No Customer Acceptance Of Product"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <RadioButton
+                android:id="@+id/notInterestedIn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Not Interested in Selling"
+                android:textColor="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <RadioButton
+                android:id="@+id/paymentIssue"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:buttonTint="@color/colorAccent"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="Payment/Credit Issue with Distributor"
+                android:textColor="@color/colorAccent" />
+
+
+        </RadioGroup>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="Submit"
+        android:textColor="@color/textColor" />
+
+
+</RelativeLayout>

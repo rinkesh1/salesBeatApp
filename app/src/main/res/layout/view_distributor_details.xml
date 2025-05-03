@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/headerDV"
+        layout="@layout/toolbar3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llShareDistributor"
+        android:layout_below="@+id/headerDV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Firm Name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvFirmNameD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Firm Address" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvFirmAddressD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Pincode" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvPincodeD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Town/City" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvTownCityD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="State" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvStateDD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Owner Name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvOwnerNameD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Mobile 1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvMobile1D"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Mobile 2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvMobile2D"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Email id" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvEmailIdD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="GSTIN" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvGstinD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Fssai" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvFssaiD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Pan No" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvPanNoD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Monthly Turnover" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvMonthlyTurnoverD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Beat name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvBeatNameD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="No of Shop in a beat" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvNoOfShopInBeatD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Investment Plan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvInvestmentPlanD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Product Division" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvProductDivisionD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Brands" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvOtherBrands"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Working Since" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvWorkingSinceD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Other contact person name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvOtherContactPersonNameD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Other contact person mobile" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvOtherContactPersonMobileD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Your Opinion about distributor" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvYourOpinionDistributor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".45"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Remarks" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".05"
+                    android:text=":" />
+
+
+                <TextView
+                    android:id="@+id/tvRemarksDD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="----------" />
+
+            </LinearLayout>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="250dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/llShareDistributor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothammedium"
+            android:text="Share"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+</RelativeLayout>

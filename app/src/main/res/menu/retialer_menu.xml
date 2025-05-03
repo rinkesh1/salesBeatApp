@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/changeDistance"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Sort by Distance" />
+
+        <item
+            android:id="@+id/changeBeat"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Change beat" />
+
+        <item
+            android:id="@+id/changeDistributor"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Change distributor" />
+
+
+        <item
+            android:id="@+id/addNewRetailer"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Add new retailer" />
+
+
+        <!--        <item-->
+        <!--            android:id="@+id/addPreferredRetailer"-->
+        <!--            android:icon="@drawable/ic_menu_camera"-->
+        <!--            android:title="Add preferred retailer" />-->
+
+
+        <item
+            android:id="@+id/refreshLocal"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Refresh" />
+
+    </group>
+
+
+</menu>

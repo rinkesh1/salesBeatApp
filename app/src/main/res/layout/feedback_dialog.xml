@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        android:gravity="left|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Your Feedback"
+            android:textColor="@color/app_background"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:hint="type here"
+        android:padding="10dp" />
+
+
+    <Button
+        android:id="@+id/btnSubmitFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Submit feedback"
+        android:textColor="@color/app_background"
+        android:theme="@style/ButtonGray" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llDeclineReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Type Reason of rejection"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor" />
+
+        <EditText
+            android:id="@+id/edtDeclineReason"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/app_background"
+            android:gravity="center|left|top"
+            android:hint="Type here..."
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:text="Submit"
+            android:textColor="@color/app_background"
+            android:theme="@style/ButtonGray" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="my_images" path="Android/data/com.newsalesbeat/files/Pictures" />
+</paths>-->
+<!--
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+<external-path name="external_files" path="." />
+</paths>-->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-cache-path
+        name="external_cache"
+        path="." />
+    <external-path
+        name="external_files"
+        path="." />
+    <paths>
+        <external-path
+            name="shared_images"
+            path="Download/SharedImages/" />
+    </paths>
+</paths>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--&lt;!&ndash;<paths>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <external-path&ndash;&gt;-->
+    <!--&lt;!&ndash;        name="my_images"&ndash;&gt;-->
+    <!--&lt;!&ndash;        path="Android/data/com.salesbeat/files/Pictures" />&ndash;&gt;-->
+    <!--&lt;!&ndash;</paths>&ndash;&gt;-->
+    <!--<paths xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--    <external-files-path name="my_images" path="Pictures" />-->
+    <!--</paths>-->

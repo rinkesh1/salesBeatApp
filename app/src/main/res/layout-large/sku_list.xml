@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:id="@+id/headerRL"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:padding="12dp"
+                android:src="@drawable/leftarrow_white" />
+
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/pageTitle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".70"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:myfont="GothamMedium.otf" />
+
+
+            <ImageView
+                android:id="@+id/imgFilterBy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="17dp"
+                android:src="@drawable/filter_by" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llOrderConfirmation"
+        android:layout_below="@+id/headerRL"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/sku"
+                android:textColor="@android:color/white"
+                app:myfont="GothamLight.otp" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/brandname"
+                android:textColor="@android:color/white"
+                app:myfont="GothamLight.otp" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:myfont="GothamLight.otp" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/qnty"
+                android:textColor="@android:color/white"
+                app:myfont="GothamLight.otp" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:text="@string/unit"
+                android:textColor="@android:color/white"
+                app:myfont="GothamLight.otp" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSkuErrormsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rvSkuList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout="@layout/layout_sample_view"
+                app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rlCustomKeyboard"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_above="@+id/llOrderConfirmation"-->
+    <!--android:background="@color/textColor"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center">-->
+
+    <!--<LinearLayout-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/one"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="1" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/two"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="2" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/three"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="3" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/four"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="4" />-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/five"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="5" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/six"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="6" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/seven"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="7" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/eight"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="8" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/nine"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="9" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+
+    <!--<Button-->
+    <!--android:id="@+id/buttondel"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="X" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/buttonzero"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="0" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/buttonnext"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="Next" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/llOrderConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvStc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".77"
+                android:gravity="center"
+                android:text="Stock Confirmation"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                app:myfont="GothamMedium.otp" />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".15"
+                android:padding="17dp"
+                android:src="@drawable/forward_new"
+                android:tint="@color/app_background" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

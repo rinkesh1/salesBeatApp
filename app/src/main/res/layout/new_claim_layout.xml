@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/gothammedium"
+        android:text="Apply for TA,DA and others expenses."
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <CalendarView
+            android:id="@+id/newClaimCalendarView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvCurrentDateClaim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="01-01-2018"
+            android:visibility="gone" />
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="150dp">-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:id="@+id/llTA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgTA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_close_notif"
+                    android:tint="@color/colorPrimaryDarkk"
+                    android:visibility="visible" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for TA"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:myfont="GothamLight.otf" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+
+            <LinearLayout
+                android:id="@+id/llDA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgDA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_close_notif"
+                    android:tint="@color/colorPrimaryDarkk"
+                    android:visibility="visible" />
+
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvDA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for DA"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:myfont="GothamLight.otf" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--        </LinearLayout>-->
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="150dp">-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+
+            <LinearLayout
+                android:id="@+id/llOther"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgOther"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_close_notif"
+                    android:tint="@color/colorPrimaryDarkk"
+                    android:visibility="visible" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for Others"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:myfont="GothamLight.otf" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:tint="@color/colorPrimaryDarkk"
+                    android:visibility="visible" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:myfont="GothamLight.otf" />
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

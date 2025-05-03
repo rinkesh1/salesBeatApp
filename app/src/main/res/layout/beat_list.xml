@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgNoRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_record" />
+
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgNoRecord"
+            android:layout_centerInParent="true"
+            android:text="No Record"
+            app:myfont="GothamLight.otf" />
+
+
+        <Button
+            android:id="@+id/btnChangeDistributor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTemp"
+            android:layout_centerInParent="true"
+            android:drawableStart="@drawable/ic_refresh"
+            android:padding="10dp"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/colorPrimary"
+            android:text="Change Distributor" />
+
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/beatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="10"
+            app:shimmer_demo_grid_child_count="2"
+            app:shimmer_demo_layout="@layout/layout_sample_view"
+            app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

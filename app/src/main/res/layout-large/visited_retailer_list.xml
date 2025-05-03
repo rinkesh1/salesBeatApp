@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabUpDown"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/down_arrow48" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgNoRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/no_record" />
+
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNoRecord"
+                android:layout_centerInParent="true"
+                android:text="No Record" />
+
+
+            <Button
+                android:id="@+id/btnChangeBeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTemp"
+                android:layout_centerInParent="true"
+                android:text="Change Beat" />
+
+
+            <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:id="@+id/rcRetailerList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_demo_angle="20"
+                app:shimmer_demo_child_count="10"
+                app:shimmer_demo_grid_child_count="2"
+                app:shimmer_demo_layout="@layout/layout_sample_view"
+                app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlDisList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/imgNoRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_record" />
+
+
+        <com.newsalesbeatApp.customview.CustomTextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgNoRecord"
+            android:layout_centerInParent="true"
+            android:text="No Record"
+            app:myfont="GothamLight.otf" />
+
+
+        <Button
+            android:id="@+id/btnChangeTown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTemp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:text="Change Town" />
+
+
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+            android:id="@+id/rcDistrebutorList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="10"
+            app:shimmer_demo_grid_child_count="2"
+            app:shimmer_demo_layout="@layout/layout_sample_view"
+            app:shimmer_demo_layout_manager_type="linear_vertical" />
+
+    </RelativeLayout>
+
+    <!-- <LinearLayout
+         android:id="@+id/llDownloadStatus"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="25">
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".10"
+                 android:orientation="vertical">
+
+
+             </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".1">
+
+
+                 <LinearLayout
+                     android:layout_width="2dp"
+                     android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                     android:background="@color/material_light_hint_text" />
+
+
+                 <RelativeLayout
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerInParent="true"
+                     android:layout_marginTop="20dp"
+                     android:gravity="center">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_centerInParent="true"
+                         android:background="@drawable/circle_with_redborder" />
+
+                     <TextView
+                         android:id="@+id/tvDisMappingDownloadProgress"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerInParent="true"
+                         android:text="0%"
+                         android:textSize="12sp"
+                         android:visibility="gone"/>
+
+                     <ImageView
+                         android:id="@+id/imgDisMappingDownloadDone"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_centerInParent="true"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/ic_done_white_36dp"
+                         android:tint="@color/colorAccent" />
+
+                 </RelativeLayout>
+
+
+             </RelativeLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".65"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="5dp"
+                     android:layout_marginTop="30dp"
+                     android:text="Initializing Distributors Mapping"
+                     android:textSize="18sp" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="25">
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".10"
+                 android:orientation="vertical">
+
+
+             </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".1">
+
+
+                 <LinearLayout
+                     android:layout_width="2dp"
+                     android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                     android:background="@color/material_light_hint_text" />
+
+
+                 <RelativeLayout
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerInParent="true"
+                     android:layout_marginTop="20dp"
+                     android:gravity="center">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_centerInParent="true"
+                         android:background="@drawable/circle_with_redborder" />
+
+                     <TextView
+                         android:id="@+id/tvDisDownloadProgress"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerInParent="true"
+                         android:text="0%"
+                         android:textSize="12sp"
+                         android:visibility="gone" />
+
+                     <ImageView
+                         android:id="@+id/imgDisDownloadDone"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_centerInParent="true"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/ic_done_white_36dp"
+                         android:tint="@color/colorAccent" />
+
+                 </RelativeLayout>
+
+
+             </RelativeLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".65"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:id="@+id/tvDownloadingDis"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="5dp"
+                     android:layout_marginTop="30dp"
+                     android:text="Downloading Distributors List"
+                     android:textSize="18sp" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="25">
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".10"
+                 android:orientation="vertical">
+
+
+             </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".1">
+
+
+                 <LinearLayout
+                     android:layout_width="2dp"
+                     android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                     android:background="@color/material_light_hint_text" />
+
+
+                 <RelativeLayout
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerInParent="true"
+                     android:layout_marginTop="20dp"
+                     android:gravity="center">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_centerInParent="true"
+                         android:background="@drawable/circle_with_redborder" />
+
+                     <TextView
+                         android:id="@+id/tvBeatDownloadProgress"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerInParent="true"
+                         android:text="0%"
+                         android:textSize="12sp"
+                         android:visibility="gone" />
+
+                     <ImageView
+                         android:id="@+id/imgBeatDownloadDone"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_centerInParent="true"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/ic_done_white_36dp"
+                         android:tint="@color/colorAccent" />
+
+                 </RelativeLayout>
+
+
+             </RelativeLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".65"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:id="@+id/tvDownloadingBeats"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="5dp"
+                     android:layout_marginTop="30dp"
+                     android:text="Downloading Beat List"
+                     android:textSize="18sp" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_weight="25">
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".10"
+                 android:orientation="vertical">
+
+
+             </LinearLayout>
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight=".1">
+
+
+                 <LinearLayout
+                     android:layout_width="2dp"
+                     android:layout_height="match_parent"
+                     android:layout_centerInParent="true"
+                     android:background="@color/material_light_hint_text" />
+
+
+                 <RelativeLayout
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentTop="true"
+                     android:layout_centerInParent="true"
+                     android:layout_marginTop="20dp"
+                     android:gravity="center">
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_centerInParent="true"
+                         android:background="@drawable/circle_with_redborder" />
+
+                     <TextView
+                         android:id="@+id/tvRetDownloadProgress"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerInParent="true"
+                         android:text="0%"
+                         android:textSize="12sp"
+                         android:visibility="gone" />
+
+                     <ImageView
+                         android:id="@+id/imgRetDownloadDone"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_centerInParent="true"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/ic_done_white_36dp"
+                         android:tint="@color/colorAccent" />
+
+                 </RelativeLayout>
+
+
+             </RelativeLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight=".65"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:id="@+id/tvDownloadingRet"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="5dp"
+                     android:layout_marginTop="30dp"
+                     android:text="Downloading Retailers List"
+                     android:textSize="18sp" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+     </LinearLayout>-->
+
+</LinearLayout>

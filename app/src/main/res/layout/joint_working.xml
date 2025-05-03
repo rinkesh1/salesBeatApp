@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/cToolB"
+        layout="@layout/toolbar3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llProceed"
+        android:layout_below="@+id/cToolB">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothammedium"
+                    android:padding="10dp"
+                    android:text="Joint working with :"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmpList"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/empListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/material_light_hint_text" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothammedium"
+                    android:padding="10dp"
+                    android:text="Reason for joint working :"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llReasonList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/chbCoverageDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="Coverage Down"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+                <CheckBox
+                    android:id="@+id/chbPlacementDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="Placement Down"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <CheckBox
+                    android:id="@+id/chbSpecialSkuFocus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="Special SKU Focus"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <CheckBox
+                    android:id="@+id/chbNewMarketLaunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="New Market Launching"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <CheckBox
+                    android:id="@+id/chbQPSSchemeFocus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="QPS Scheme Focus"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <CheckBox
+                    android:id="@+id/chbNewConsumerOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="New ConsumerOffer Focus"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+                <CheckBox
+                    android:id="@+id/chbAnyOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothambook"
+                    android:text="Any Other"
+                    android:textColor="@color/colorAccent"
+                    android:theme="@style/MyCheckBox" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/material_light_hint_text" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edtCommentJ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/material_ripple_light"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|left|top"
+                    android:hint="Comment here..."
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Other : "
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_rectangle"
+                    android:fontFamily="@font/gothambook"
+                    android:hint="joint working with other person"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llAddEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/material_light_hint_text"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/addOtherView"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:tint="@color/textColor" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothambook"
+                android:padding="10dp"
+                android:text="Please select start and end time :"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@color/material_light_hint_text"
+                    android:padding="10dp"
+                    android:text="00:00:00"
+                    android:textColor="@color/app_background" />
+
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".5"
+                    android:background="@color/material_light_hint_text"
+                    android:padding="10dp"
+                    android:text="00:00:00"
+                    android:textColor="@color/app_background" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/material_light_hint_text" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llProceed"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvProceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothammedium"
+            android:text="PROCEED"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

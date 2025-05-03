@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scDialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/dialogContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/status_e"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Other Activity"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvFullDayActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardOA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/checkintime"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvCheckInTimeD"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/checkouttime"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvCheckOutTimeD"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/tc"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvTotalCall"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/pc"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvProductiveCall"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForward"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="@string/ls"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvLineSold"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Beat assigned"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvBeatAssigned"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardBA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Beat Visited"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvBeatVisited"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardBV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="New Counter"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvNewCounter"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+                <ImageView
+                    android:id="@+id/imgForwardNC"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_forward_24dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Reason"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvReason"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Target"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvTarget"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Sale"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvSale"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Achievement"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvAchievement"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <!--//////////////////////////////-->
+
+
+            <!--////////////////////////////-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Total Retailing Time"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvTRT"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:text="Total Working Hour"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.1"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center"
+                    android:text="@string/colon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvTWH"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/gothamlight"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="@string/blanktext"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_blue_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transparent_black" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llCancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/scDialogContent"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothamlight"
+            android:text="@string/ok"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llShowSummary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:fontFamily="@font/gothammedium"
+            android:text="Show Summary"
+            android:textAllCaps="true"
+            android:textColor="@color/textColor" />
+
+    </LinearLayout>
+
+</RelativeLayout>

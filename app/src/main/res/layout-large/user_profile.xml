@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<include
+            android:id="@+id/myToolBar"
+            layout="@layout/toolbar3"/>
+-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnUpdate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp">
+
+                    <ImageView
+                        android:id="@+id/imgBlurBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#DD424242"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlPicContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/circle_with_border" />
+
+                            <com.newsalesbeatApp.customview.RoundedImageView
+                                android:id="@+id/userProPic"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/men_placeholder" />
+
+                            <RelativeLayout
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="75dp"
+                                android:layout_marginTop="80dp"
+                                android:background="@drawable/circle_with_border">
+
+                                <ImageView
+                                    android:id="@+id/chaneImage"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/circle_primary_color"
+                                    android:padding="7dp"
+                                    android:src="@drawable/ic_edit_black_24dp"
+                                    android:tint="@android:color/white" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llEmpName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlPicContainer"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tvEmpName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothammedium"
+                                android:gravity="center"
+                                android:text="---------------"
+                                android:textAllCaps="true"
+                                android:textColor="@color/textColor"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llEmpName">
+
+                            <TextView
+                                android:id="@+id/tvEmpEmailId"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".5"
+                                android:fontFamily="@font/gothammedium"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="abc@gmail.com"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/circle_with_border"
+                        android:elevation="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/leftarrow_white"
+                        android:tint="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Mobile No."
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmpPoneNo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:text="+91 - 0000000000"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Reporting to"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmpReportingTo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:text="-----------------"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Designation"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmpDesignation"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:text="-----------------"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Headquarter"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvHeadquarter"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:text="-----------------"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Zone"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmpZone"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:text="-----------------"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="State"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:gravity="center"
+                            android:text="@string/colon"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tvEmpState"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothammedium"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:text="-----------------"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/gothammedium"
+            android:text="Update"
+            android:textColor="@color/textColor" />
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

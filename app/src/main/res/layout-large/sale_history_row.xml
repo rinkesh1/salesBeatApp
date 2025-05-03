@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.RoundedImageView
+                android:id="@+id/empPic"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circleback_gray"
+                android:elevation="5dp"
+                android:padding="5dp"
+                android:src="@drawable/men_placeholder" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvEmpNameH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="1dp"
+                android:text="Bharat Sharma"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                app:myfont="GothamMedium.otf" />
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvTotalSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="1dp"
+                android:text="200Kg"
+                app:myfont="GothamMedium.otf" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_ripple_light" />
+
+</LinearLayout>

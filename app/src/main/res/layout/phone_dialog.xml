@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:cardElevation="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/calendar_icon" />
+
+
+            <TextView
+                android:id="@+id/tvCurrnetDateD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 Feb, 2018"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtBillTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bill Total"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Remarks"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:id="@+id/llAddPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" />
+
+
+        <LinearLayout
+            android:id="@+id/llUploadDocs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Upload document if any"
+                android:textColor="@color/material_light_hint_text"
+                android:textSize="22sp" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:src="@drawable/up_arrow48"
+                android:tint="@color/material_light_hint_text" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:elevation="5dp"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SUBMIT"
+                android:textColor="@color/textColor"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

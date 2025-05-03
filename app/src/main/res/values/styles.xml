@@ -1,0 +1,138 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Here you go. This changes overflow icon colour. -->
+        <item name="android:textColorSecondary">@color/app_background</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="DialogActivityTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="chipBackgroundColor">@color/colorPrimary</item>
+        <item name="chipStrokeColor">@color/colorAccent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="closeIconEnabled">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_top</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom</item>
+    </style>
+
+    <style name="DialogTheme2">
+        <!--<item name="android:windowEnterAnimation">@anim/slide_from_left</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/slide_to_right</item>-->
+    </style>
+
+    <style name="DialogAnimationSlide">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimationSlide</item>
+    </style>
+
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+    </style>
+
+    <style name="SearchViewTheme" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="layout">@layout/toolbar_search_view</item>
+        <!--<item name="commitIcon">@drawable/ic_search_commit</item>-->
+        <item name="colorControlNormal">@color/material_light_active_icon</item>
+        <item name="colorControlHighlight">@color/material_ripple_light</item>
+        <item name="autoCompleteTextViewStyle">@style/AutoCompleteTextViewStyle</item>
+        <item name="suggestionRowLayout">@layout/search_view_suggestion_row</item>
+        <item name="android:maxWidth">9999dp</item>
+    </style>
+
+    <style name="AutoCompleteTextViewStyle" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:popupBackground">@drawable/search_suggestions_bg</item>
+        <!--<item name="android:popupElevation">0dp</item>-->
+    </style>
+
+    <style name="Button.Primary.Borderless" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="EditText.Flat.Grey" parent="@style/AppTheme">
+        <item name="android:textColorHint">@color/grey_40</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textColor">@color/grey_90</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="searchViewStyle">@style/SearchViewTheme</item>
+    </style>
+
+
+    <!--theme for button-->
+    <style name="ButtonGray">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <!--theme for button-->
+    <style name="ButtonTheme">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <!--theme for button-->
+    <style name="ButtonThemeY">
+        <item name="colorButtonNormal">#ebb72b</item>
+    </style>
+
+    <!--theme for button-->
+    <style name="ButtonTheme2">
+        <item name="colorButtonNormal">@color/red_like</item>
+    </style>
+
+
+    <!--Check Box-->
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyCal" parent="@android:Theme">
+        <item name="android:calendarViewStyle">@style/Widget.CalendarView.Custom</item>
+    </style>
+
+    <style name="Widget.CalendarView.Custom" parent="android:Widget.CalendarView">
+        <item name="android:focusedMonthDateColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+
+    <style name="Theme.UserDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

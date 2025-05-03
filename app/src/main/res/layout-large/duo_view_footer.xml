@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <View
+        android:id="@+id/duo_view_footer_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/duo_view_footer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duo_view_footer_border"
+        android:fontFamily="@font/gothammedium"
+        android:minWidth="@android:dimen/thumbnail_width"
+        android:paddingLeft="32dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:text="10.3(42) Test"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/imgUploadDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="20dp"
+        android:text="Send Log"
+        android:textColor="@color/textColor" />
+
+</RelativeLayout>

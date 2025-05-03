@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AddPreferredRetailerActivity">
+
+    <include
+        android:id="@+id/myToolBar"
+        layout="@layout/toolbar3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Name of the firm*" />
+
+                <EditText
+                    android:id="@+id/firmNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Contact Person Name 1*" />
+
+                <EditText
+                    android:id="@+id/firmContactPersonName1Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Contact Person Name 2" />
+
+                <EditText
+                    android:id="@+id/firmContactPersonName2Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Distributor Name*" />
+
+                <Spinner
+                    android:id="@+id/distributorNameEt"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:gravity="center"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:gravity="center|left"-->
+            <!--                    android:text="Distributor Name*" />-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/distributorNameEt"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:hint="Type here..."-->
+            <!--                    android:background="@android:color/transparent"-->
+            <!--                    android:singleLine="true"-->
+            <!--                    android:inputType="textCapWords"-->
+            <!--                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "-->
+            <!--                    android:textColor="@android:color/black" />-->
+
+
+            <!--            </LinearLayout>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Contact Person1 phone*" />
+
+                <EditText
+                    android:id="@+id/distributorContactPersonName1Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Type here..."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Contact Person2 phone" />
+
+                <EditText
+                    android:id="@+id/distributorContactPersonName2Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Type here..."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Latitude Longitude*" />
+
+                <EditText
+                    android:id="@+id/firmLatLongEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Block*" />
+
+                <EditText
+                    android:id="@+id/firmBlockEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="District*" />
+
+                <EditText
+                    android:id="@+id/firmDistrictEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                    android:hint="Type here..."
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Proposed Category*" />
+
+                <RadioGroup
+                    android:id="@+id/proposedCategoryRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/diamondRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Diamond"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/goldenRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Golden"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/silverRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Silver"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/bronzeRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Bronze"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Per month expected business*" />
+
+                <RadioGroup
+                    android:id="@+id/perMonthBusinessRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/expectedRange1RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="200-500 KG"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/expectedRange2RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="100-200 KG"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/expectedRange3RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="50-100 KG"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/expectedRange4RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="25-50 KG"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Top Tea Brands at Outlet*" />
+
+                <LinearLayout
+                    android:id="@+id/brandsListLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Option 1"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Option 2"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Option 3"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Is the retailer also do distribution of any brand?*" />
+
+                <RadioGroup
+                    android:id="@+id/retailerDistributionRg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/retailerDoDistributionRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Yes"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                    <RadioButton
+                        android:id="@+id/retailerNoDistributionRadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="No"
+                        android:textColor="@color/colorPrimary"
+                        android:theme="@style/MyCheckBox" />
+
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/retailerDistributionBrandSpinner"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Monthly T/O*" />
+
+                <Spinner
+                    android:id="@+id/monthlyTurnoverSpinner"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Number of internal staff*" />
+
+                <Spinner
+                    android:id="@+id/internalStaffNumberSpinner"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Average per day walk in*" />
+
+                <EditText
+                    android:id="@+id/perDayWalkInEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Type here..."
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Average income of walk in customers*" />
+
+                <EditText
+                    android:id="@+id/averageIncomeCustomersEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Type here..."
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Other business of retailer if any" />
+
+                <EditText
+                    android:id="@+id/otherBusinessEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Type here..."
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Shop Image*" />
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/transparent_black">
+
+                    <ImageView
+                        android:id="@+id/shopImagePreferredRetailer"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/cameraIcon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_menu_camera" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Shop existing details: "
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Roof Height (10ft/9ft/8ft) :"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Open fascia width: "
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Available fixture type (wooden/metal/mix) :"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Front/Activity space of shop: "
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Approx. total shelf of shop: "
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Where can he provide space for us:"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Measurement of front counter of Retailer (height/width/length) :"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="Width of road passing the shop: "
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:text="The floor is (cemented/mud/tile/wooden/other) :"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="Which brand has posted their branding" />
+
+                <Spinner
+                    android:id="@+id/brandsListSpinner"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="What is the branding space" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/sidePanelSizeTv"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="Side panel size          :"
+                        android:textColor="#3C3737" />
+
+                    <TextView
+                        android:id="@+id/counterSizeTv"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sidePanelSizeTv"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|left"
+                        android:text="Counter size               :"
+                        android:textColor="#3C3737" />
+
+                    <TextView
+                        android:id="@+id/frontBoardSizeTv"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/counterSizeTv"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|left"
+                        android:text="GSB/Front lid board size                               :"
+                        android:textColor="#3C3737" />
+
+                    <EditText
+                        android:id="@+id/sidePanelSizeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/sidePanelSizeTv"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/counterSizeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sidePanelSizeEt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/counterSizeTv"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/frontBoardSizeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/counterSizeEt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/frontBoardSizeTv"
+                        android:background="@android:color/transparent"
+                        android:hint="Type here..."
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/addPreferredRetailerButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:text="Add Preferred Retailer"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

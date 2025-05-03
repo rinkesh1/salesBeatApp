@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDarkk">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Alert"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large">
+
+        <EditText
+            style="@style/EditText.Flat.Grey"
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_round_bg_white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:minHeight="45dp"
+            android:paddingLeft="@dimen/spacing_middle"
+            android:paddingRight="@dimen/spacing_middle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_margin="@dimen/spacing_medium"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_decline"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="cancel"
+            android:textColor="@color/cyan_700" />
+
+        <Button
+            android:id="@+id/bt_accept"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Logout"
+            android:textColor="@color/cyan_700" />
+
+    </LinearLayout>
+
+</LinearLayout>

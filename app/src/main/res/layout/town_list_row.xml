@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rlTownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/cityIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:gravity="center">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/townIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/gray_rectangle"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="A"
+                android:textAllCaps="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:myfont="GothamMedium.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#f8f8f8"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/townName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/nextLayout"
+            android:layout_toRightOf="@+id/cityIcon"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:id="@+id/tvTownName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:myfont="GothamBook.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nextLayout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/nextIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_keyboard_arrow_right_black_48dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

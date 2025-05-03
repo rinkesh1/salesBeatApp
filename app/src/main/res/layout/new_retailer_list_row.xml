@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight=".3">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/imgNRetailerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/men_placeholder" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Name"
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:fontFamily="@font/gothammedium"
+                        android:text=":"
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:id="@+id/tvNRetailerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="@string/blanktext"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Owner"
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:fontFamily="@font/gothammedium"
+                        android:text=":"
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:id="@+id/tvNRetailerOwnerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="@string/blanktext"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Mobile No."
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:fontFamily="@font/gothammedium"
+                        android:text=":"
+                        android:textColor="@color/colorPrimaryLight" />
+
+                    <TextView
+                        android:id="@+id/tvNRetailerOwnerMobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".65"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="@string/blanktext"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Address"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="State"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerState"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Pin"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerPin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="District"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerDistrict"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Locality"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerLocality"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Outlet Channel"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerOutletChannel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Shop Type"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerShopType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:fontFamily="@font/gothammedium"
+                android:text="Grade"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".05"
+                android:fontFamily="@font/gothammedium"
+                android:text=":"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <TextView
+                android:id="@+id/tvNRetailerGrade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".65"
+                android:fontFamily="@font/gothammedium"
+                android:text="@string/blanktext"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutShare"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnShareImgWeb"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            android:text="Share Image"
+            android:textColor="@color/app_background" />
+    </RelativeLayout>
+
+</RelativeLayout>

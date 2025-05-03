@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/saleHisRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        app:expandedTitleMarginStart="70dp">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/CollapsingToolbarLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:minHeight="?android:attr/actionBarSize"
+                        app:layout_collapseMode="pin" />
+
+                    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                        android:id="@+id/calendarSaleHistoryDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textColor"
+                        android:minHeight="?android:attr/actionBarSize" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/material_ripple_light" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@color/app_background"
+                    android:gravity="center"
+                    android:text="Pull to refresh"
+                    android:textColor="@color/colorPrimary" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSaleHistoryDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvNoDataSaleHis"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/gothammedium"
+                    android:gravity="center"
+                    android:text="NO DATA"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
+
+
+                <ProgressBar
+                    android:id="@+id/pbSaleHis"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="160dp" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

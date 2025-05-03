@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retailerListMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/retailerIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/placeholder3"
+                    />
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#99ffffff"
+                    android:padding="8dp"
+                    android:text="1"
+                    android:textColor="@color/colorPrimary"
+                    app:myfont="GothamMedium.otf" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="0dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/retailerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:maxLines="2"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        app:fontFamily="sans-serif-medium" />
+
+
+                    <ImageView
+                        android:id="@+id/infoIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="4dp"
+                        android:src="@drawable/info_icon" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/tvRetailerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothambook"
+                        android:gravity="center|left|top"
+                        android:layout_weight=".9"
+                        android:maxLines="2"
+                        android:text="@string/blanktext"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="4dp"
+                        android:src="@drawable/baseline_location_on_24" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvRetailerMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/gothambook"
+                        android:text="@string/blanktext"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryLight"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgCall"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/baseline_local_phone_24" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvRetailerBeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|left|top"
+                    android:maxLines="2"
+                    android:text="@string/blanktext"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_rectangle"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.newsalesbeatApp.customview.CustomTextView
+                        android:id="@+id/tvCheckInShop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:gravity="center"
+                        android:text="@string/checkin_e"
+                        android:textAllCaps="true"
+                        app:myfont="GothamBook.otf" />
+
+                    <LinearLayout
+                        android:id="@+id/llCheckIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.newsalesbeatApp.customview.CustomTextView
+                            android:id="@+id/tvInTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:text="00-00-0000"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="visible"
+                            app:myfont="GothamBook.otf" />
+
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/tvCancelCheckIn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/gothambook"
+                            android:gravity="center"
+                            android:text="Cancel"
+                            android:textColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Politics"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wed, 20 Jan 19, 05:08 PM"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_40" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lyt_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:minHeight="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/img_social_envato" />
+
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Item Title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_80" />
+
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/bt_expand"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/grey_60"
+                app:srcCompat="@drawable/ic_expand_arrow" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lyt_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_3"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/callIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_call" />
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/locationIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_location" />
+
+                    <Button
+                        android:id="@+id/btnOnShopOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spacing_xlarge"
+                        android:background="@drawable/expand_rounded_accent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="Book Order"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/btnNoOrderToday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spacing_xlarge"
+                        android:background="@drawable/expand_rounded_accent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="No Order"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spacing_xlarge"
+                        android:background="@drawable/expand_rounded_accent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="Cancel Order"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/btnHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spacing_xlarge"
+                        android:background="@drawable/expand_rounded_accent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="History"
+                        android:textColor="@android:color/white" />
+                    <Button
+                        android:id="@+id/btnTelephonicOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spacing_xlarge"
+                        android:background="@drawable/expand_rounded_accent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="Telephonic"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linfooter"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/callIcon_1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_local_phone_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+            <ImageView
+                android:id="@+id/locationIcon_1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+
+            <!--<ImageView-->
+            <!--android:id="@+id/infoIcon"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/ic_info_black_24dp" />-->
+
+
+            <!--<LinearLayout-->
+            <!--android:background="@color/demo_light_transparent"-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="match_parent"/>-->
+
+
+            <ImageView
+                android:id="@+id/feedBackIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_feedback_black_24dp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvNoOrderToday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="?selectableItemBackgroundBorderless"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="No Order"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+
+            <TextView
+                android:id="@+id/tvTelephonicOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="?selectableItemBackgroundBorderless"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Telephonic Order"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/tvOnShopOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Book Order"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="2dp"
+                android:src="@drawable/ic_more_vert_gray" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imgScheduled"-->
+    <!--android:visibility="gone"-->
+    <!--android:background="#99FFFFFF"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--</RelativeLayout>-->
+
+
+</androidx.cardview.widget.CardView>

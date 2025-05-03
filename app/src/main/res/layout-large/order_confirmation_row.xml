@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="1dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="1dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/skuName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".35"
+            android:gravity="center|left"
+            android:padding="5dp"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/brandName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/brandPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtOrderQuantity"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight=".15"
+            android:background="#F0F0F0"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+
+        <TextView
+            android:id="@+id/tvUnit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/kg"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOrederAdd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addtoorderlist" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

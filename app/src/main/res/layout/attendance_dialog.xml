@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llAttandanceDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialogHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/calenderIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
+            android:src="@drawable/calendar_icon" />
+
+        <TextView
+            android:id="@+id/tvDateViewL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/gothammedium"
+            android:text="@string/blanktext"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rdGroupAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/rdBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:theme="@style/MyCheckBox" />
+
+
+        <RadioButton
+            android:id="@+id/rdBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:theme="@style/MyCheckBox" />
+
+
+        <RadioButton
+            android:id="@+id/rdBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:theme="@style/MyCheckBox" />
+
+
+        <RadioButton
+            android:id="@+id/rdBtn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:theme="@style/MyCheckBox" />
+
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/llReason"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothamlight"
+            android:padding="10dp"
+            android:text="Why do you want to take leave?"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary" />
+
+
+        <EditText
+            android:id="@+id/edtReason"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/gothamlight"
+            android:gravity="top|center|start"
+            android:hint="Type here..."
+            android:padding="10dp"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llReason2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/btnFrom"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".5"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/gothamlight"
+                android:text="From Date"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/ButtonGray" />
+
+            <Button
+                android:id="@+id/btnTo"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight=".5"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/gothamlight"
+                android:text="To Date"
+                android:textColor="@color/colorPrimary"
+                android:theme="@style/ButtonGray" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gothamlight"
+            android:padding="10dp"
+            android:text="Why do you want to take leave?"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary" />
+
+
+        <EditText
+            android:id="@+id/edtReason2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/gothamlight"
+            android:gravity="top|center|start"
+            android:hint="type reason here..."
+            android:padding="10dp"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent_black" />
+
+    <LinearLayout
+        android:id="@+id/layoutDone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:fontFamily="@font/gothammedium"
+            android:text="@string/done"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

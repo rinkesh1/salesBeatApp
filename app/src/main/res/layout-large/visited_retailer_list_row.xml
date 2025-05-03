@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retailerListMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textColor"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:id="@+id/rlRetailerImg"
+                android:layout_width="120dp"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/llServerStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical" />
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/retailerIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/placeholder3"
+                    android:scaleType="centerCrop" />
+
+                <com.newsalesbeatApp.customview.CustomTextView
+                    android:id="@+id/tvCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#99ffffff"
+                    android:padding="8dp"
+                    android:text="1"
+                    android:textColor="@color/colorPrimary"
+                    app:myfont="GothamMedium.otf" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/rlRetailerImg"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/retName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginRight="45dp">
+
+                    <com.newsalesbeatApp.customview.CustomTextView
+                        android:id="@+id/retailerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="@string/app_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:myfont="GothamMedium.otf" />
+
+
+                    <ImageView
+                        android:id="@+id/infoIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_weight=".2"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:src="@drawable/info_icon" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvTimeStamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/retName"
+                    android:fontFamily="@font/gothambook"
+                    android:text="(11:30 AM)"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvRetailerAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTimeStamp"
+                    android:fontFamily="@font/gothambook"
+                    android:gravity="center|left|top"
+                    android:maxLines="2"
+                    android:text="@string/blanktext"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/llOrderStamp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp">-->
+
+                <!--<com.salesbeat.customview.CustomTextView-->
+                <!--android:id="@+id/tvOrderType"-->
+                <!--android:gravity="center"-->
+                <!--android:visibility="gone"-->
+                <!--android:background="@color/green_like"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="12sp"-->
+                <!--android:text="Productive"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:fontFamily="@font/gothammedium"/>-->
+
+                <!--</LinearLayout>-->
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvOrderType"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="?attr/colorAccent"
+                android:gravity="center"
+                android:rotation="45"
+                android:singleLine="true"
+                android:text="Productive"
+                android:textColor="@color/textColor"
+                android:textSize="10sp"
+                android:translationX="36dp"
+                android:translationY="8dp" />
+
+            <TextView
+                android:id="@+id/tvNewRetailer"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ribbon"
+                android:gravity="center"
+                android:text="New"
+                android:textColor="@color/textColor"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/demo_light_transparent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/callIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_local_phone_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+
+            <ImageView
+                android:id="@+id/feedBackIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_feedback_black_24dp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tvCancelOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="?selectableItemBackgroundBorderless"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Cancel Order"
+                android:textAllCaps="true"
+                android:textColor="@color/red_like"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+
+            <TextView
+                android:id="@+id/tvRevisedOrder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="?selectableItemBackgroundBorderless"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:text="Revise Order"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/demo_light_transparent" />
+
+
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="2dp"
+                android:src="@drawable/ic_more_vert_gray" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

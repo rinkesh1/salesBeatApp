@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SalesAddActivity"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar3" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeUp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Select Month"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/border_rectangle_no_radius"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/slctMonthSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearNoInternet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Select Distributor"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_rectangle_no_radius"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/slctDistributorSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:spinnerMode="dropdown"
+                                android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Visit"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/border_rectangle_no_radius"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/txtVisit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothammedium"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Primary Target"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border_rectangle_no_radius"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/edtAddtarget"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/whitish"
+                                android:fontFamily="@font/gothammedium"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/gothammedium"
+                            android:text="Secondary Target"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border_rectangle_no_radius"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/edtSecAddtarget"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/whitish"
+                                android:fontFamily="@font/gothammedium"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnSubmitTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorAccent"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="SUBMIT"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtNoInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="@string/internetUnavailablMsg"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

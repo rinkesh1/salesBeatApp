@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.newsalesbeatApp.customview.VerticalTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Secondary"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/material_ripple_light" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Monthly Sale in kg"
+                        android:textColor="@color/colorPrimary" />
+
+
+                    <!-- <ImageView
+                         android:id="@+id/imgSecondaryData"
+                         android:background="?selectableItemBackgroundBorderless"
+                         android:layout_marginRight="20dp"
+                         android:layout_alignParentRight="true"
+                         android:tint="@color/colorPrimary"
+                         android:src="@drawable/ic_filter_list_black_24dp"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp" />-->
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="20dp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+                        <!--<com.db.chart.view.HorizontalStackBarChartView-->
+                        <!--android:id="@+id/barChartSecondarySale"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:visibility="visible" />-->
+
+                        <LinearLayout
+                            android:id="@+id/llGraphContainerSecondarySale"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" />
+
+
+                        <TextView
+                            android:id="@+id/tvSecondaryNoInternet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSecondarySaleT"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:text="00"
+                            android:textColor="@android:color/holo_orange_dark" />
+
+                        <TextView
+                            android:id="@+id/tvSecondarySaleAch"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50"
+                            android:gravity="center|top"
+                            android:paddingTop="5dp"
+                            android:text="00"
+                            android:textColor="@android:color/holo_orange_dark" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llCreatePjp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/border_rectangle">
+
+            <EditText
+                android:id="@+id/edtDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:editable="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="00-00-0000"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_rectangle">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvActivityList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imgActivityList"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="Activity List"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <ImageView
+                android:id="@+id/imgActivityList"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorAccent" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlTownList"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_rectangle">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvTownList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imgTownList"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="Town List"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <ImageView
+                android:id="@+id/imgTownList"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorAccent" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlDistributorList"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_rectangle">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvDistributorList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imgDistributorList"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="Distributor List"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <ImageView
+                android:id="@+id/imgDistributorList"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBeatList"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_rectangle">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvBeatList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imgBeatList"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="Beat List"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <ImageView
+                android:id="@+id/imgBeatList"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorAccent" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlEmpList"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border_rectangle">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvEmployeeList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imgEmployeeList"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/gothammedium"
+                android:hint="Employee List"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <ImageView
+                android:id="@+id/imgEmployeeList"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="?android:selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/drop_down"
+                android:tint="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llTcPc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_rectangle">
+
+            <EditText
+                android:id="@+id/edtTcPjp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:hint="Tc"
+                android:inputType="number"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edtPcPjp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:hint="Pc"
+                android:inputType="number"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edtSalePjp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".33"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center"
+                android:hint="Sale in Kg"
+                android:inputType="number"
+                android:padding="8dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/edtRemarksPjp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/border_rectangle"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="center|top|left"
+                android:hint="Type here...."
+                android:maxLines="4"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnCreatePjp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="@font/gothammedium"
+                android:text="Create"
+                android:textColor="@color/textColor"
+                android:theme="@style/ButtonTheme" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

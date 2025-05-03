@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvOrderTakenDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/oval_react"
+        android:elevation="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="1dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="1dp"
+        android:text="12-03-2018"
+        android:textColor="#FFFFFF"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFullView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/checkb"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="Distributor Name" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvDistributorNameH"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:text="Jai Bhagawan"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="Retailer Name" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvRetailerNameH"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:text="Maaa durga "
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:text="Order Type" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".05"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tvOrderTypeH"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:text="On Shop"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorAccent">
+
+                    <Button
+                        android:id="@+id/btnViewOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="1dp"
+                        android:background="@color/textColor"
+                        android:text="View Order"
+                        android:textColor="@color/colorAccent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

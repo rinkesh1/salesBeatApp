@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9">
+
+    <include
+        android:id="@+id/llTP"
+        layout="@layout/tool_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/llm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llNext"
+        android:layout_below="@+id/llTP"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+
+            <ImageView
+                android:id="@+id/backPage"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/leftarrow_white"
+                android:tint="@color/colorAccent"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tvTitleForToady"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gothammediumf"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="What will be your activity tomorrow?"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/material_ripple_light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:id="@+id/llNewStartWorkList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvActivityList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvTownList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvDistributorList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvEmployeeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvMeetingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llTravelling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtFromNS"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="From"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                    <EditText
+                        android:id="@+id/edtToNS"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="To"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llVanSales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/edtVanNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Van Number"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                    <EditText
+                        android:id="@+id/edtDriverName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Driver Name"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llTownDist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/edtTownName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Town Name"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                    <EditText
+                        android:id="@+id/edtDistributorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Distributor Name"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                    <EditText
+                        android:id="@+id/edtEmpName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Employee Name"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llCommentAct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        android:background="#f9f9f9"
+                        android:gravity="top"
+                        android:hint="Explain tomorrow's plan in details...."
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="#c0c0c0" />
+
+                    <info.kimjihyok.ripplelibrary.VoiceRippleView
+                        android:id="@+id/imgRecordAudio"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/material_ripple_light"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tvNotListed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@color/red_like"
+            android:gravity="center"
+            android:text="Not Listed"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="?selectableItemBackground"
+            android:fontFamily="@font/gothammediumf"
+            android:gravity="center"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llDone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackground"
+            android:fontFamily="@font/gothammediumf"
+            android:gravity="center"
+            android:text="Done"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
