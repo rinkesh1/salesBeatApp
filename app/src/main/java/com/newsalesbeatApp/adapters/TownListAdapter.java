@@ -512,6 +512,7 @@ public class TownListAdapter extends RecyclerView.Adapter<TownListAdapter.ViewHo
                                                 object.getString("sku"),
                                                 brand.getString("brandName"),
                                                 object.getString("price"),
+                                                object.getString("skuweight"),
                                                 object.getString("unit"),
                                                 object.getString("conversionFactor"),
                                                 base64Data
@@ -522,6 +523,7 @@ public class TownListAdapter extends RecyclerView.Adapter<TownListAdapter.ViewHo
                                                 object.getString("sku"),
                                                 brand.getString("brandName"),
                                                 object.getString("price"),
+                                                object.getString("skuweight"),
                                                 object.getString("unit"),
                                                 object.getString("conversionFactor"),
                                                 "" // Insert a blank string

@@ -207,7 +207,6 @@ public class DistributorListAdapter2 extends RecyclerView.Adapter<DistributorLis
                             salesBeatDb.deleteAllDataFromSkuDetailsTable();
                         }
 
-
                         for (int i = 0; i < products.length(); i++) {
 
                             JSONObject object = (JSONObject) products.get(i);
@@ -226,6 +225,7 @@ public class DistributorListAdapter2 extends RecyclerView.Adapter<DistributorLis
                                             object.getString("sku"),
                                             object.getString("brandName"),
                                             object.getString("price"),
+                                            object.getString("skuweight"),
                                             object.getString("unit"),
                                             object.getString("conversionFactor"),
                                             base64Data
@@ -236,6 +236,7 @@ public class DistributorListAdapter2 extends RecyclerView.Adapter<DistributorLis
                                             object.getString("sku"),
                                             object.getString("brandName"),
                                             object.getString("price"),
+                                            object.getString("skuweight"),
                                             object.getString("unit"),
                                             object.getString("conversionFactor"),
                                             "" // Insert a blank string

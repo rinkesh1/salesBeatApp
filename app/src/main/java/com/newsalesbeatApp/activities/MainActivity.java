@@ -46,6 +46,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -196,6 +200,18 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
 ////                Snackbar.make(findViewById(R.id.activity_main), "Network Status: " + networkStatus, Snackbar.LENGTH_LONG).show();
 //            }
 //        }, intentFilter1);
+
+
+//        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+//
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_content), (v, insets) -> {
+//            Insets statusInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars());
+//            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+//
+//            v.setPadding(0, statusInsets.top, 0, navInsets.bottom);
+//            return insets;
+//        });
+
         sentryException();
         performNetworkRequest();
 

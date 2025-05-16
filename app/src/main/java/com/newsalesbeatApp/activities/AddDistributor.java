@@ -1,5 +1,7 @@
 package com.newsalesbeatApp.activities;
 
+import static androidx.core.content.ContentProviderCompat.requireContext;
+
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -39,6 +41,7 @@ import com.newsalesbeatApp.R;
 import com.newsalesbeatApp.fragments.AddNewDistributor;
 import com.newsalesbeatApp.fragments.AddNewDistributorForm;
 import com.newsalesbeatApp.fragments.DistributorHistory;
+import com.newsalesbeatApp.netwotkcall.ServerCall;
 import com.newsalesbeatApp.sblocation.GPSLocation;
 
 import java.io.File;
@@ -64,12 +67,15 @@ public class AddDistributor extends AppCompatActivity {
 //    private VoiceRipple voiceRipple;
     private static final long MAX_TIME_MS = 180000;
     private static final int REQUEST_PERMISSION_CODE = 1001;
+    private ServerCall serverCall;
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.other_activity2);
         distributorTab = findViewById(R.id.distributorTab);
         distributorViewpager = findViewById(R.id.distributorViewpager);
+
+
 
         Toolbar mToolbar = findViewById(R.id.toolbar3);
         ImageView imgBack = mToolbar.findViewById(R.id.imgBack);
@@ -82,6 +88,8 @@ public class AddDistributor extends AppCompatActivity {
         locationProvider = new GPSLocation(this);
         //check gps status if on/off
         locationProvider.checkGpsStatus();
+
+        serverCall = new ServerCall(this);
 
         //set up view pager
         setUpViewPager(distributorViewpager);

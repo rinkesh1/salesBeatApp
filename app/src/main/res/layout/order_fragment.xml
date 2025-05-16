@@ -39,6 +39,7 @@
                 app:myfont="GothamLight.otf" />
 
             <com.newsalesbeatApp.customview.CustomTextView
+                android:visibility="gone"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
@@ -56,6 +57,14 @@
                 android:text="@string/price"
                 android:textColor="@android:color/white"
                 android:visibility="gone"
+                app:myfont="GothamLight.otf" />
+            <com.newsalesbeatApp.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:text="@string/weight"
+                android:textColor="@android:color/white"
                 app:myfont="GothamLight.otf" />
 
             <com.newsalesbeatApp.customview.CustomTextView

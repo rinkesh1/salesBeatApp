@@ -163,6 +163,7 @@
     <string name="sku">SKU\'s Name</string>
     <string name="brandname">Brand Name</string>
     <string name="price">Price</string>
+    <string name="weight">Weight</string>
     <string name="qnty">Qnty</string>
     <string name="unit">Unit</string>
     <string name="orderconfirm">Order Confirmation</string>

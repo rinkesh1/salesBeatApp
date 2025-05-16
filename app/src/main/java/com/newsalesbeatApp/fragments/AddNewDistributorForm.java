@@ -1,5 +1,7 @@
 package com.newsalesbeatApp.fragments;
 
+import static androidx.core.content.ContentProviderCompat.requireContext;
+
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -70,6 +72,7 @@ import com.newsalesbeatApp.activities.AddDistributor;
 import com.newsalesbeatApp.adapters.LocationViewModel;
 import com.newsalesbeatApp.interfaces.ClientInterface;
 import com.newsalesbeatApp.netwotkcall.RetrofitClient;
+import com.newsalesbeatApp.netwotkcall.ServerCall;
 import com.newsalesbeatApp.receivers.ConnectivityChangeReceiver;
 import com.newsalesbeatApp.sblocation.GPSLocation;
 import com.newsalesbeatApp.services.TempService;
@@ -121,7 +124,7 @@ public class AddNewDistributorForm extends Fragment {
     //    private LinearLayout formContainer;
     private int seconds;
     private Map<String, View> inputFields = new HashMap<>();
-
+    private ServerCall serverCall;
     private static final int REQUEST_IMAGE_SHOP = 102;
     private static final int REQUEST_IMAGE_OWNER = 103;
 
@@ -163,6 +166,7 @@ public class AddNewDistributorForm extends Fragment {
         myPref = requireContext().getSharedPreferences(getString(R.string.pref_name), Context.MODE_PRIVATE);
         Log.d("TAG", "AddNewDistributorForm :"+myPref.getString("token",""));
 //        formContainer = view.findViewById(R.id.formContainer);
+        deleteAudioFile();
         locationProvider = new GPSLocation(getActivity());
         getFormResponse();
 
@@ -173,9 +177,26 @@ public class AddNewDistributorForm extends Fragment {
         return view;
     }
 
+    private void deleteAudioFile() {
+        Uri fileUri = getLatestAudioFileUri();
+//        Log.d("TAG", "Delete path: "+fileUri.getPath());
+        if (fileUri != null) {
+            ContentResolver resolver = getActivity().getContentResolver();
+            int deletedRows = resolver.delete(fileUri, null, null);
+
+            if (deletedRows > 0) {
+
+//                Toast.makeText(getActivity(), "File deleted", Toast.LENGTH_SHORT).show();
+            } else {
+//                Toast.makeText(getActivity(), "Failed to delete file", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+//            Toast.makeText(getActivity(), "File not found", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     private void startService() {
         SampleResultReceiver resultReceiever = new SampleResultReceiver(new Handler());
-        //start service to download data
         Intent startIntent = new Intent(getContext(), TempService.class);
         startIntent.putExtra("receiver", resultReceiever);
         requireActivity().startService(startIntent);
@@ -247,6 +268,546 @@ public class AddNewDistributorForm extends Fragment {
 
     @SuppressLint("ResourceType")
     private void generateForm(JSONArray fieldsArray) {
+        LinearLayout formLayout = view.findViewById(R.id.formContainer);
+        formLayout.removeAllViews(); // Clear old views
+        int fieldIndex = 1;
+
+        for (int i = 0; i < fieldsArray.length(); i++) {
+            try {
+                JSONObject field = fieldsArray.getJSONObject(i);
+                String fieldType = field.getString("type");
+                String fieldId = field.getString("id");
+                String label = field.getString("label");
+                boolean isRequired = field.optBoolean("required", false);
+
+                // Create Label (Heading)
+                TextView textView = new TextView(getActivity());
+                textView.setText(label);
+                textView.setTextSize(16);
+                textView.setTypeface(null, Typeface.BOLD);
+                textView.setPadding(0, 10, 0, 5);
+                formLayout.addView(textView);
+
+                if (fieldType.equals("text") || fieldType.equals("number")) {
+                    // Check if this is the Company/Firm Address field and add refresh icon
+                    if (label.equals("Company/Firm Address") || fieldId.equalsIgnoreCase("address")) {
+                        // Create a horizontal layout to hold both the EditText and the refresh icon
+                        LinearLayout addressLayout = new LinearLayout(getActivity());
+                        addressLayout.setOrientation(LinearLayout.HORIZONTAL);
+                        addressLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                        ));
+
+                        // EditText for address with adjusted width to make room for icon
+                        EditText editText = new EditText(getActivity());
+                        editText.setHint(label);
+                        editText.setTextSize(16);
+                        editText.setTextColor(Color.BLACK);
+                        editText.setHintTextColor(Color.GRAY);
+                        editText.setPadding(20, 20, 20, 20);
+                        editText.setBackgroundResource(R.drawable.edit_text_bg);
+                        editText.setTag(fieldId);
+
+                        // Set EditText to take most of the space but leave room for the icon
+                        LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(
+                                0,
+                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                0.85f
+                        );
+                        editText.setLayoutParams(editTextParams);
+
+                        // Create refresh icon
+                        ImageView refreshIcon = new ImageView(getActivity());
+                        refreshIcon.setImageResource(R.drawable.ic_refresh); // Assuming you have this drawable
+                        refreshIcon.setBackground(getRoundedCardDrawable("#3F51B5"));
+                        refreshIcon.setColorFilter(Color.WHITE);
+                        refreshIcon.setPadding(10, 10, 10, 10);
+
+                        // Set appropriate size for refresh icon
+                        int iconSize = (int) TypedValue.applyDimension(
+                                TypedValue.COMPLEX_UNIT_DIP,
+                                40,
+                                getResources().getDisplayMetrics()
+                        );
+
+                        LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(
+                                iconSize,
+                                iconSize
+                        );
+                        iconParams.gravity = Gravity.CENTER_VERTICAL;
+                        iconParams.setMargins(10, 0, 0, 0);
+                        refreshIcon.setLayoutParams(iconParams);
+
+                        // Add click listener to the refresh icon
+                        refreshIcon.setOnClickListener(v -> {
+                            // Add your refresh logic here
+                            Toast.makeText(getActivity(), "Refreshing address...", Toast.LENGTH_SHORT).show();
+                            startService();
+                            // Example: Get current location or refresh address data
+                            // getCurrentLocation();
+                        });
+
+                        // Add views to the layout
+                        addressLayout.addView(editText);
+                        addressLayout.addView(refreshIcon);
+
+                        // Add the layout to the form
+                        formLayout.addView(addressLayout);
+
+                        // Add to fieldMap for later access
+                        fieldMap.put(fieldId, editText);
+
+                        if (fieldType.equals("number")) {
+                            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
+                        }
+
+                        if (field.has("validation")) {
+                            JSONObject validation = field.getJSONObject("validation");
+                            int maxLength = validation.optInt("maxLength", Integer.MAX_VALUE);
+                            String pattern = validation.optString("pattern", "");
+
+                            editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+
+                            if (!pattern.isEmpty()) {
+                                addDynamicValidation(editText, pattern);
+                            }
+                        }
+
+                        if (isRequired) {
+                            editText.setTag(R.id.required, true);
+                        }
+                    } else {
+                        // Regular text/number field without refresh icon
+                        EditText editText = new EditText(getActivity());
+                        editText.setHint(label);
+                        editText.setTextSize(16);
+                        editText.setTextColor(Color.BLACK);
+                        editText.setHintTextColor(Color.GRAY);
+                        editText.setPadding(20, 20, 20, 20);
+                        editText.setBackgroundResource(R.drawable.edit_text_bg);
+                        editText.setTag(fieldId);
+
+                        if (fieldType.equals("number")) {
+                            editText.setInputType(InputType.TYPE_CLASS_NUMBER);
+                        }
+
+                        fieldMap.put(fieldId, editText);
+
+                        if (field.has("validation")) {
+                            JSONObject validation = field.getJSONObject("validation");
+                            int maxLength = validation.optInt("maxLength", Integer.MAX_VALUE);
+                            String pattern = validation.optString("pattern", "");
+
+                            editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+
+                            if (!pattern.isEmpty()) {
+                                addDynamicValidation(editText, pattern);
+                            }
+                        }
+
+                        if (fieldId.equalsIgnoreCase("pan")) {
+                            addPANValidation(editText);
+                        } else if (fieldId.equalsIgnoreCase("gstin")) {
+                            addGSTINValidation(editText);
+                        }
+
+                        if (isRequired) {
+                            editText.setTag(R.id.required, true);
+                        }
+                        formLayout.addView(editText);
+                    }
+                } else if (fieldType.equals("dynamicText")) {
+                    LinearLayout brandSectionLayout = new LinearLayout(getActivity());
+                    brandSectionLayout.setOrientation(LinearLayout.VERTICAL);
+                    brandSectionLayout.setPadding(10, 10, 10, 10);
+
+                    // FrameLayout to overlay icon inside EditText
+                    FrameLayout inputContainer = new FrameLayout(getActivity());
+
+                    // Brand EditText
+                    EditText brandEditText = new EditText(getActivity());
+                    brandEditText.setHint("Enter brand name");
+                    brandEditText.setTextSize(16);
+                    brandEditText.setTextColor(Color.BLACK);
+                    brandEditText.setHintTextColor(Color.GRAY);
+                    brandEditText.setPadding(20, 20, 60, 20); // Right padding to avoid overlap with icon
+                    brandEditText.setBackgroundResource(R.drawable.edit_text_bg);
+                    brandEditText.setLayoutParams(new FrameLayout.LayoutParams(
+                            FrameLayout.LayoutParams.MATCH_PARENT,
+                            FrameLayout.LayoutParams.WRAP_CONTENT
+                    ));
+                    brandEditText.setTag(fieldId);
+
+                    ImageView addIcon = new ImageView(getActivity());
+                    addIcon.setImageResource(R.drawable.ic_add);
+                    addIcon.setBackground(getRectDrawable("#3F51B5"));
+                    addIcon.setClickable(true);
+                    addIcon.setFocusable(true);
+                    addIcon.setPadding(0, 0, 0, 0);
+                    addIcon.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+
+                    int iconSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
+                    FrameLayout.LayoutParams iconParams = new FrameLayout.LayoutParams(
+                            iconSize, iconSize, Gravity.END | Gravity.CENTER_VERTICAL);
+                    iconParams.setMargins(0, 0, 10, 0);
+                    addIcon.setLayoutParams(iconParams);
+
+                    inputContainer.setClipChildren(true);
+                    inputContainer.setClipToPadding(true);
+
+                    // Add views to FrameLayout
+                    inputContainer.addView(brandEditText);
+                    inputContainer.addView(addIcon);
+
+                    // Add FrameLayout to parent
+                    brandSectionLayout.addView(inputContainer);
+
+                    // ChipGroup for added brands
+                    chipGroup = new ChipGroup(getActivity());
+                    chipGroup.setLayoutParams(new LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                    ));
+                    chipGroup.setChipSpacing(10);
+                    chipGroup.setPadding(0, 10, 0, 10);
+                    brandSectionLayout.addView(chipGroup);
+
+                    formLayout.addView(brandSectionLayout);
+
+                    // Add brand logic
+                    addIcon.setOnClickListener(v -> {
+                        String brandName = brandEditText.getText().toString().trim();
+
+                        if (!brandName.isEmpty()) {
+                            if (stringList.contains(brandName)) {
+                                Toast.makeText(getActivity(), "Brand already added!", Toast.LENGTH_SHORT).show();
+                            } else {
+                                stringList.add(brandName);
+                                addChipToGroup(brandName);
+                                brandEditText.setText("");
+                            }
+                        }
+                    });
+                } else if (fieldType.equals("checkbox")) {
+                    JSONArray options = field.getJSONArray("options");
+                    int itemsPerRow = 2;
+                    LinearLayout rowLayout = null;
+
+                    for (int j = 0; j < options.length(); j++) {
+                        JSONObject optionObj = options.getJSONObject(j);
+                        String product = optionObj.getString("product");
+                        String imageBase64 = optionObj.optString("image");
+
+                        if (j % itemsPerRow == 0) {
+                            rowLayout = new LinearLayout(getActivity());
+                            rowLayout.setOrientation(LinearLayout.HORIZONTAL);
+                            rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT
+                            ));
+                            rowLayout.setPadding(0, 8, 0, 8);
+                            formLayout.addView(rowLayout);
+                        }
+
+                        // Parent layout for one item
+                        LinearLayout itemLayout = new LinearLayout(getActivity());
+                        itemLayout.setOrientation(LinearLayout.HORIZONTAL);
+                        itemLayout.setGravity(Gravity.CENTER_VERTICAL);
+                        itemLayout.setPadding(16, 16, 16, 16);
+                        itemLayout.setBackgroundResource(R.drawable.checkbox_item_bg); // Optional background
+
+                        LinearLayout.LayoutParams itemParams = new LinearLayout.LayoutParams(
+                                0,
+                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                1f
+                        );
+                        itemParams.setMargins(8, 8, 8, 8);
+                        itemLayout.setLayoutParams(itemParams);
+
+                        // ImageView for product image
+                        ImageView productImage = new ImageView(getActivity());
+                        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(64, 64);
+                        imageParams.setMargins(0, 0, 16, 0);
+                        productImage.setLayoutParams(imageParams);
+
+                        if (imageBase64 != null && !imageBase64.isEmpty()) {
+                            try {
+                                String base64Image = imageBase64.split(",")[1];
+                                byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
+                                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                                productImage.setImageBitmap(decodedByte);
+                            } catch (Exception e) {
+                                productImage.setImageResource(R.drawable.ic_noimage);
+                            }
+                        } else {
+                            productImage.setImageResource(R.drawable.ic_noimage);
+                        }
+
+                        // Checkbox for product
+                        CheckBox checkBox = new CheckBox(getActivity());
+                        checkBox.setText(product);
+                        checkBox.setTag(fieldId);
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            checkBox.setButtonTintList(ColorStateList.valueOf(Color.BLACK));
+                        }
+
+                        // Text color (optional - match checkbox color)
+                        checkBox.setTextColor(Color.BLACK);
+
+                        // OnChecked logic
+                        checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                            if (isChecked) {
+                                if (!listProductDivision.contains(product)) {
+                                    listProductDivision.add(product);
+                                }
+                            } else {
+                                listProductDivision.remove(product);
+                            }
+                            Log.d("SelectedCheckboxes", "Current selection: " + listProductDivision.toString());
+                        });
+
+                        itemLayout.addView(productImage);
+                        itemLayout.addView(checkBox);
+                        rowLayout.addView(itemLayout);
+                    }
+                } else if (fieldType.equals("radio")) {
+                    JSONArray options = field.getJSONArray("options");
+                    RadioGroup radioGroup = new RadioGroup(getActivity());
+                    radioGroup.setTag(fieldId);
+
+                    if (isRequired) {
+                        radioGroup.setTag(R.id.required, true);
+                    }
+
+                    for (int j = 0; j < options.length(); j++) {
+                        String option = options.getString(j);
+                        RadioButton radioButton = new RadioButton(getActivity());
+                        radioButton.setText(option);
+                        radioButton.setTag(fieldId);
+                        radioGroup.addView(radioButton);
+                    }
+
+                    formLayout.addView(radioGroup);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Rest of the method remains unchanged
+        timerTextView = new TextView(getActivity());
+        timerTextView.setText("00:00");
+        timerTextView.setTextSize(24);
+        timerTextView.setTextColor(Color.RED);
+        timerTextView.setTypeface(null, Typeface.BOLD);
+        timerTextView.setGravity(Gravity.CENTER);
+        timerTextView.setVisibility(View.GONE);
+        timerTextView.setPadding(10, 20, 10, 20);
+        formLayout.addView(timerTextView);
+
+        // The rest of the method continues as before...
+        LinearLayout recordingLayout = new LinearLayout(getActivity());
+        recordingLayout.setOrientation(LinearLayout.HORIZONTAL);
+        recordingLayout.setGravity(Gravity.CENTER);
+        recordingLayout.setPadding(5, 20, 5, 20);
+
+        LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        buttonParams.setMargins(10, 0, 10, 0);
+
+        // START REC Button
+        startRecordingButton = new Button(getActivity());
+        startRecordingButton.setText("START REC");
+        startRecordingButton.setBackground(getRoundedCardDrawable("#4CAF50")); // Set card background
+        startRecordingButton.setTextColor(Color.WHITE);
+        startRecordingButton.setTextSize(16);
+        startRecordingButton.setPadding(25, 20, 25, 20);
+        startRecordingButton.setLayoutParams(buttonParams);
+        recordingLayout.addView(startRecordingButton);
+
+        // PLAY REC Button (Initially Hidden)
+        playButton = new Button(getActivity());
+        playButton.setText("PLAY REC");
+        playButton.setBackground(getRoundedCardDrawable("#FF9800")); // Orange color
+        playButton.setTextColor(Color.WHITE);
+        playButton.setTextSize(16);
+        playButton.setPadding(25, 20, 25, 20);
+        playButton.setLayoutParams(buttonParams);
+        playButton.setVisibility(View.GONE);
+        recordingLayout.addView(playButton);
+
+        // Delete Icon (Initially Hidden)
+        deleteIcon = new ImageView(getActivity());
+        deleteIcon.setImageResource(R.drawable.ic_delete);
+        deleteIcon.setPadding(5, 20, 5, 20);
+        deleteIcon.setLayoutParams(buttonParams);
+        deleteIcon.setVisibility(View.GONE);
+        recordingLayout.addView(deleteIcon);
+
+        formLayout.addView(recordingLayout);
+
+        startRecordingButton.setOnClickListener(v -> {
+            if (!checkPermissions()) {
+                requestPermissions();
+                return;
+            }
+
+            if (isRecording) {
+                stopRecording();
+            } else {
+                startRecording();
+            }
+        });
+
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isPlaying) {
+                    stopPlaying();
+                } else {
+                    startPlaying();
+                }
+            }
+        });
+
+        deleteIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri fileUri = getLatestAudioFileUri();
+                Log.d("TAG", "Delete path: "+fileUri.getPath());
+                if (fileUri != null) {
+                    ContentResolver resolver = getActivity().getContentResolver();
+                    int deletedRows = resolver.delete(fileUri, null, null);
+
+                    if (deletedRows > 0) {
+                        if (isPlaying) {
+                            stopPlaying();
+                        }
+
+                        timerTextView.setVisibility(View.GONE);
+                        startRecordingButton.setVisibility(View.VISIBLE);
+                        startRecordingButton.setText("START REC");
+                        playButton.setText("PLAY REC");
+                        playButton.setVisibility(View.GONE);
+                        deleteIcon.setVisibility(View.GONE);
+                        Toast.makeText(getActivity(), "File deleted", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), "Failed to delete file", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getActivity(), "File not found", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // The rest of your code remains unchanged
+        LinearLayout imageContainer = new LinearLayout(getActivity());
+        imageContainer.setOrientation(LinearLayout.HORIZONTAL);
+        imageContainer.setGravity(Gravity.CENTER);
+        imageContainer.setPadding(10, 20, 10, 20);
+
+        // Define LayoutParams with weight and margin for spacing
+        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+        imageParams.setMargins(20, 0, 20, 0); // Adds horizontal space
+
+        // --- Owner Image Section ---
+        LinearLayout ownerLayout = new LinearLayout(getActivity());
+        ownerLayout.setOrientation(LinearLayout.VERTICAL);
+        ownerLayout.setLayoutParams(imageParams);
+
+        // Owner Header
+        TextView ownerLabel = new TextView(getActivity());
+        ownerLabel.setText("Owner Image");
+        ownerLabel.setTextSize(16);
+        ownerLabel.setTypeface(null, Typeface.BOLD);
+        ownerLabel.setGravity(Gravity.CENTER);
+        ownerLabel.setPadding(0, 0, 0, 10);
+        ownerLayout.addView(ownerLabel);
+
+        // Owner ImageView
+        ownerImageView = new ImageView(getActivity());
+        ownerImageView.setImageResource(R.drawable.ic_menu_camera);
+        ownerImageView.setPadding(40, 40, 40, 40);
+        ownerImageView.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.rect_rounded_bg));
+        ownerImageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        ownerImageView.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, 300
+        ));
+        ownerImageView.setOnClickListener(v -> openCameraForOwner());
+        ownerLayout.addView(ownerImageView);
+
+        // --- Shop Image Section ---
+        LinearLayout shopLayout = new LinearLayout(getActivity());
+        shopLayout.setOrientation(LinearLayout.VERTICAL);
+        shopLayout.setLayoutParams(imageParams);
+
+        // Shop Header
+        TextView shopLabel = new TextView(getActivity());
+        shopLabel.setText("Shop Image");
+        shopLabel.setTextSize(16);
+        shopLabel.setTypeface(null, Typeface.BOLD);
+        shopLabel.setGravity(Gravity.CENTER);
+        shopLabel.setPadding(0, 0, 0, 10);
+        shopLayout.addView(shopLabel);
+
+        // Shop ImageView
+        shopImageView = new ImageView(getActivity());
+        shopImageView.setImageResource(R.drawable.ic_menu_camera);
+        shopImageView.setPadding(40, 40, 40, 40);
+        shopImageView.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.rect_rounded_bg));
+        shopImageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        shopImageView.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, 300
+        ));
+        shopImageView.setOnClickListener(v -> openCameraForShop());
+        shopLayout.addView(shopImageView);
+
+        // Add both layouts to the container
+        imageContainer.addView(ownerLayout);
+        imageContainer.addView(shopLayout);
+
+        // Add the container to the form
+        formLayout.addView(imageContainer);
+
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
+            int seconds = 0;
+            @Override
+            public void run() {
+                seconds++;
+                int minutes = seconds / 60;
+                int secs = seconds % 60;
+                timerTextView.setText(String.format("%02d:%02d", minutes, secs));
+                handler.postDelayed(this, 1000);
+            }
+        };
+
+        // Submit Button
+        Button submitButton = new Button(getActivity());
+        submitButton.setText("ADD DISTRIBUTOR");
+        submitButton.setBackgroundColor(Color.parseColor("#4CAF50"));
+        submitButton.setTextColor(Color.WHITE);
+        submitButton.setTextSize(18);
+        submitButton.setTypeface(null, Typeface.BOLD);
+        submitButton.setPadding(30, 20, 30, 20);
+        submitButton.setBackground(getRoundedButtonDrawable());
+        submitButton.setOnClickListener(v -> {
+            Log.d("TAG", "ownerImageUri Image Path1: "+ownerImageUri);
+            Log.d("TAG", "shopImageUri Image Path1: "+ownerImageUri);
+
+            if (validateFields(formLayout)) {
+                handleSubmit(formLayout);
+            }
+        });
+        formLayout.addView(submitButton);
+    }
+
+
+    private void generateForm123(JSONArray fieldsArray) {
         LinearLayout formLayout = view.findViewById(R.id.formContainer);
         formLayout.removeAllViews(); // Clear old views
         int fieldIndex = 1;
@@ -907,7 +1468,15 @@ public class AddNewDistributorForm extends Fragment {
         return fileUri;
     }
 
-    private Drawable getRoundedCardDrawable(String colorHex) {
+    private Drawable getRoundedCardDrawable(String colorCode) {
+        GradientDrawable shape = new GradientDrawable();
+        shape.setShape(GradientDrawable.RECTANGLE);
+        shape.setCornerRadius(8);
+        shape.setColor(Color.parseColor(colorCode));
+        return shape;
+    }
+
+    private Drawable getRoundedCardDrawable123(String colorHex) {
         GradientDrawable shape = new GradientDrawable();
         shape.setColor(Color.parseColor(colorHex));
         shape.setCornerRadius(50);
@@ -1363,7 +1932,9 @@ public class AddNewDistributorForm extends Fragment {
 //            salesBeatDb.insertInNewDistributorTable(tempDid, newDistributorDetails,
 //                    /*listBeatName*/beatN, listProductDivision, ownerImageLatLong, firmImageLatLong, brandName, rec);
 
+
             Toast.makeText(getContext(), "Distributor saved successfully ", Toast.LENGTH_SHORT).show();
+            serverCall = new ServerCall(requireContext());
 
             Intent intent = new Intent(getContext(), AddDistributor.class);
             intent.putExtra("tabPos", 1);

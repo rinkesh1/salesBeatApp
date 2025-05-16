@@ -335,6 +335,7 @@ public class RetailerOrderFragment extends Fragment{
                             myProduct.setBrand(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_name")));
                             brandList.add(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_name")));
                             myProduct.setPrice(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_price")));
+                            myProduct.setWeight(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_weight")));
                             myProduct.setUnit(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_unit")));
                             myProduct.setConversion(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("conversion_factor")));
                             myProduct.setImageStr(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("sku_image")));
@@ -540,6 +541,7 @@ public class RetailerOrderFragment extends Fragment{
                             myProduct.setBrand(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_name")));
                             brandList.add(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_name")));
                             myProduct.setPrice(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_price")));
+                            myProduct.setWeight(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_weight")));
                             myProduct.setUnit(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("brand_unit")));
                             myProduct.setConversion(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("conversion_factor")));
                             myProduct.setImageStr(cursorSkuIdDetails.getString(cursorSkuIdDetails.getColumnIndex("sku_image")));

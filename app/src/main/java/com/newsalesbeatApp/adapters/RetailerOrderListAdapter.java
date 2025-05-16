@@ -62,9 +62,16 @@ public class RetailerOrderListAdapter extends RecyclerView.Adapter<RetailerOrder
         holder.tvBrandPrice.setText(myProductArrayList.get(position).getPrice() + "/-");
         holder.tvUnit.setText("/ " + myProductArrayList.get(position).getUnit());
         holder.edtQuantity.setText(myProductArrayList.get(position).getQuantity());
+        String weight = myProductArrayList.get(position).getWeight();
+        if (weight == null || weight.equalsIgnoreCase("null")) {
+            holder.tvBrandWeight.setText("");
+        } else {
+            holder.tvBrandWeight.setText(weight);
+        }
 
 //        Log.d("TAG", "Tv BrandName: "+myProductArrayList.get(position).getBrand());
         Log.d("TAG", "Tv BrandName: "+myProductArrayList.get(position).getImageStr());
+
 
         setImageFromBase64(myProductArrayList.get(position).getImageStr(), holder.skuImage);
 
@@ -159,7 +166,7 @@ public class RetailerOrderListAdapter extends RecyclerView.Adapter<RetailerOrder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvSkus, tvBrandName, tvBrandPrice, tvUnit;
+        TextView tvSkus, tvBrandName, tvBrandPrice, tvUnit,tvBrandWeight;
         EditText edtQuantity;
         ImageView skuImage;
 
@@ -172,6 +179,7 @@ public class RetailerOrderListAdapter extends RecyclerView.Adapter<RetailerOrder
             edtQuantity = itemView.findViewById(R.id.edtOrderQuantity);
             tvUnit = itemView.findViewById(R.id.tvUnit);
             skuImage = itemView.findViewById(R.id.imgSkuIcon);
+            tvBrandWeight = itemView.findViewById(R.id.brandWeight);
         }
     }
 }

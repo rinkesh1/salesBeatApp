@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 
 public class MyProduct implements Serializable {
-    String mySkus, brand, price, unit, product_id, quantity, conversion,imageStr;
+    String mySkus, brand, price,weight, unit, product_id, quantity, conversion,imageStr;
 
     public String getMySkus() {
         return this.mySkus;
@@ -71,5 +71,13 @@ public class MyProduct implements Serializable {
 
     public void setImageStr(String imageStr) {
         this.imageStr = imageStr;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 }

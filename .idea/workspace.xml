@@ -15,6 +15,12 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/activity_main.xml">
+        <config>
+          <state>Portrait</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_preferred_retailer.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -76,6 +82,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_fragment.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -358,6 +369,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/image_preview.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/new_distributor_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/new_distributor_search.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_fragment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/other_activity2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/other_activity2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
@@ -378,7 +390,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Rinkesh - pc\.android\avd\Pixel_3a_API_35_extension_level_13_x86_64.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=ZA222SQK27)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -678,18 +690,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/netwotkcall/ServerCall.java</url>
-          <line>1972</line>
+          <line>2122</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/netwotkcall/ServerCall.java</url>
-          <line>2022</line>
+          <line>2172</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/AddNewDistributorForm.java</url>
-          <line>1540</line>
+          <line>2111</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/netwotkcall/ServerCall.java</url>
+          <line>2083</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

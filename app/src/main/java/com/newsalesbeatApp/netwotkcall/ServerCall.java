@@ -1853,8 +1853,8 @@ public class ServerCall {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void syncNewlyAddedDistributors() {
-
+    private void syncNewlyAddedDistributors111() {
+        Log.d(TAG, "syncNewlyAddedDistributors check");
         Cursor newDistributorCursor = null;
         try {
             Log.d(TAG, "syncNewlyAddedDistributors: "+requestQ);
@@ -1918,6 +1918,156 @@ public class ServerCall {
             if (newDistributorCursor != null)
                 newDistributorCursor.close();
         }
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    private void syncNewlyAddedDistributors() {
+        Log.d(TAG, "syncNewlyAddedDistributors check");
+        Cursor cursor = null;
+        try {
+            if (!requestQ.containsKey("R6")) {
+
+                // ✅ Only fetch required lightweight columns initially
+                String query = "SELECT new_distributor_id, name_of_firm, firm_address, pincode, city, state, " +
+                        "owner_name, owner_mobile_no1, owner_mobile_no2, email_id, gstin, fssai_no, pan_no, " +
+                        "beat_name, product_division, other_contact_person_name, other_contact_person_phn, " +
+                        "opinion_about_distributor, comment, transactionId, brand_name " +
+                        "FROM new_distributor WHERE TRIM(server_status) = ?";
+                cursor = salesBeatDb.getReadableDatabase().rawQuery(query, new String[]{"fail"});
+
+                if (cursor != null && cursor.moveToFirst()) {
+                    do {
+                        Log.d(TAG, "Row found, processing...");
+
+                        String tempDid = cursor.getString(cursor.getColumnIndex("new_distributor_id"));
+                        String name_of_firm = cursor.getString(cursor.getColumnIndex("name_of_firm"));
+                        String firm_address = cursor.getString(cursor.getColumnIndex("firm_address"));
+                        String pincode = cursor.getString(cursor.getColumnIndex("pincode"));
+                        String city = cursor.getString(cursor.getColumnIndex("city"));
+                        String state = cursor.getString(cursor.getColumnIndex("state"));
+                        String owner_name = cursor.getString(cursor.getColumnIndex("owner_name"));
+                        String owner_mobile_no1 = cursor.getString(cursor.getColumnIndex("owner_mobile_no1"));
+                        String owner_mobile_no2 = cursor.getString(cursor.getColumnIndex("owner_mobile_no2"));
+                        String email_id = cursor.getString(cursor.getColumnIndex("email_id"));
+                        String gstin = cursor.getString(cursor.getColumnIndex("gstin"));
+                        String fssai_no = cursor.getString(cursor.getColumnIndex("fssai_no"));
+                        String pan_no = cursor.getString(cursor.getColumnIndex("pan_no"));
+                        String beat_name = cursor.getString(cursor.getColumnIndex("beat_name"));
+                        String product_division = cursor.getString(cursor.getColumnIndex("product_division"));
+                        String other_contact_person_name = cursor.getString(cursor.getColumnIndex("other_contact_person_name"));
+                        String other_contact_person_phn = cursor.getString(cursor.getColumnIndex("other_contact_person_phn"));
+                        String opinion_about_distributor = cursor.getString(cursor.getColumnIndex("opinion_about_distributor"));
+                        String comment = cursor.getString(cursor.getColumnIndex("comment"));
+                        String transactionId = cursor.getString(cursor.getColumnIndex("transactionId"));
+                        String brandName = cursor.getString(cursor.getColumnIndex("brand_name"));
+
+                        // ✅ Lazy-load heavy BLOB fields
+                        String owner_image = getBlobFieldAsString("owner_image", tempDid);
+                        String owner_image_time_stamp = getBlobFieldAsString("owner_image_time_stamp", tempDid);
+                        String owner_image_LatLong = getBlobFieldAsString("owner_image_LatLong", tempDid);
+                        String firm_image = getBlobFieldAsString("firm_image", tempDid);
+                        String firm_image_time_stamp = getBlobFieldAsString("firm_image_time_stamp", tempDid);
+                        String firm_image_LatLong = getBlobFieldAsString("firm_image_LatLong", tempDid);
+                        String recording = getBlobFieldAsString("recording", tempDid);
+
+                        // Call upload
+                        requestQ.put("R6", "added");
+                        uploadNewDistributorDetailsToServer(tempDid, name_of_firm, firm_address, pincode, city, state,
+                                owner_name, owner_mobile_no1, owner_mobile_no2, email_id, gstin, fssai_no, pan_no, owner_image,
+                                owner_image_time_stamp, owner_image_LatLong, beat_name, product_division, other_contact_person_name,
+                                other_contact_person_phn, firm_image, firm_image_time_stamp, firm_image_LatLong, opinion_about_distributor,
+                                comment, transactionId, brandName, recording);
+
+                    } while (cursor.moveToNext());
+                } else {
+                    Log.d(TAG, "No failed rows found.");
+                }
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error in syncNewlyAddedDistributors: " + e.getMessage(), e);
+        } finally {
+            if (cursor != null) cursor.close();
+        }
+    }
+
+    /**
+     * Helper to retrieve a single column value (string/blob) for a specific distributor ID.
+     */
+    private String getBlobFieldAsString(String columnName, String distributorId) {
+        Cursor blobCursor = null;
+        String value = "";
+        try {
+            String query = "SELECT " + columnName + " FROM new_distributor WHERE new_distributor_id = ?";
+            blobCursor = salesBeatDb.getReadableDatabase().rawQuery(query, new String[]{distributorId});
+            if (blobCursor != null && blobCursor.moveToFirst()) {
+                value = blobCursor.getString(blobCursor.getColumnIndex(columnName));
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error fetching " + columnName + " for ID " + distributorId + ": " + e.getMessage());
+        } finally {
+            if (blobCursor != null) blobCursor.close();
+        }
+        return value;
+    }
+
+
+
+
+    private String getLargeField(String columnName, String distributorId) {
+        Cursor c = null;
+        String value = "";
+        try {
+            String query = "SELECT " + columnName + " FROM new_distributor WHERE new_distributor_id = ?";
+            c = salesBeatDb.getReadableDatabase().rawQuery(query, new String[]{distributorId});
+            if (c != null && c.moveToFirst()) {
+                value = c.getString(c.getColumnIndex(columnName));
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error fetching " + columnName + ": " + e.getMessage());
+        } finally {
+            if (c != null) c.close();
+        }
+        return value;
+    }
+
+    private void debugPrintAllServerStatus() {
+        Cursor debugCursor = null;
+        try {
+            debugCursor = salesBeatDb.getReadableDatabase().rawQuery("SELECT new_distributor_id, server_status FROM new_distributor", null);
+            if (debugCursor != null && debugCursor.moveToFirst()) {
+                do {
+                    String id = debugCursor.getString(debugCursor.getColumnIndex("new_distributor_id"));
+                    String status = debugCursor.getString(debugCursor.getColumnIndex("server_status"));
+                    Log.d(TAG, "Distributor ID: " + id + " | server_status: " + status);
+                } while (debugCursor.moveToNext());
+            } else {
+                Log.d(TAG, "new_distributor table is empty");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error reading all server_status values: " + e.getMessage());
+        } finally {
+            if (debugCursor != null) debugCursor.close();
+        }
+    }
+
+
+    // Helper method to get large fields safely
+    private String getLargeField11(String columnName, String distributorId) {
+        Cursor c = null;
+        String value = "";
+        try {
+            String query = "SELECT " + columnName + " FROM new_distributor WHERE new_distributor_id = ?";
+            c = salesBeatDb.getReadableDatabase().rawQuery(query, new String[]{distributorId});
+            if (c != null && c.moveToFirst()) {
+                value = c.getString(c.getColumnIndex(columnName));
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error fetching " + columnName + ": " + e.getMessage());
+        } finally {
+            if (c != null) c.close();
+        }
+        return value;
     }
 
 

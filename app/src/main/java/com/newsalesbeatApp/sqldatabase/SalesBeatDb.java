@@ -238,6 +238,7 @@ public class SalesBeatDb extends SQLiteOpenHelper {
     private String KEY_SKU_NAME = "sku_name";
     private String KEY_SKU_BRAND_NAME = "brand_name";
     private String KEY_SKU_BRAND_PRICE = "brand_price";
+    private String KEY_SKU_BRAND_WEIGHT = "brand_weight";
     private String KEY_SKU_BRAND_UNIT = "brand_unit";
     private String KEY_SKU_CONVERSION_FACTOR = "conversion_factor";
     private String KEY_SKU_IMAGE = "sku_image";
@@ -647,6 +648,7 @@ public class SalesBeatDb extends SQLiteOpenHelper {
         String CREATE_TABLE_SKU_DETAILS = "CREATE TABLE " + TABLE_SKU_DETAILS + "("
                 + KEY_SKU_ID + " INTEGER PRIMARY KEY," + KEY_SKU_NAME + " TEXT,"
                 + KEY_SKU_BRAND_NAME + " TEXT," + KEY_SKU_BRAND_PRICE + " TEXT,"
+                + KEY_SKU_BRAND_WEIGHT + " TEXT,"
                 + KEY_SKU_CONVERSION_FACTOR + " TEXT,"+ KEY_SKU_IMAGE + " TEXT," + KEY_SKU_BRAND_UNIT + " TEXT,"
                 + TRANSACTION_ID + " TEXT," + KEY_RECORD_DATE + " TEXT " + ")";
 
@@ -1661,7 +1663,7 @@ public class SalesBeatDb extends SQLiteOpenHelper {
     }
 
     //insert record sku details table
-    public void insertSkuDetailsTable(String sku_id, String sku_name, String brand_name, String brand_price,
+    public void insertSkuDetailsTable(String sku_id, String sku_name, String brand_name, String brand_price,String brand_weight,
                                       String brand_unit, String cFactor,String imgStr) {
 
         SQLiteDatabase db = getWritableDb();
@@ -1670,6 +1672,7 @@ public class SalesBeatDb extends SQLiteOpenHelper {
         contentValues.put(KEY_SKU_NAME, sku_name);
         contentValues.put(KEY_SKU_BRAND_NAME, brand_name);
         contentValues.put(KEY_SKU_BRAND_PRICE, brand_price);
+        contentValues.put(KEY_SKU_BRAND_WEIGHT, brand_weight);
         contentValues.put(KEY_SKU_BRAND_UNIT, brand_unit);
         contentValues.put(KEY_SKU_CONVERSION_FACTOR, cFactor);
         contentValues.put(KEY_SKU_IMAGE, imgStr);
