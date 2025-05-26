@@ -77,7 +77,7 @@
     <string name="cmny_id">1</string>
 
     <!--change T for test url,D for demo url,L for live url AND Loc for local url  And N For NewLive .net URL BY @Umesh-->
-    <string name="url_mode">T</string>
+    <string name="url_mode">N</string>
 
     <!--Domain Test for testing and Live for actual working rtpl@123 -->
     <string name="live_url">https://api.salesbeat.in/</string>

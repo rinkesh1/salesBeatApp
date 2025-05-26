@@ -179,38 +179,6 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("TAG", "MainActivity page");
-        /*FirebaseOptions options = new FirebaseOptions.Builder()
-                .setApplicationId("1:292187759442:android:56dbc7cc5fa95edb95508b") // mobilesdk_app_id
-                .setApiKey("AIzaSyAcFIbgmm8Q1wqCOs1PnPyV-neUhyQD41M") // current_key
-                // Add other necessary configurations if needed (like Database URL, Storage Bucket, etc.)
-                .build();
-
-        FirebaseApp.initializeApp(this *//* Context *//*, options, "secondary");*/
-
-
-//        IntentFilter intentFilter1 = new IntentFilter(ConnectivityChangeReceiver.NETWORK_AVAILABLE_ACTION);
-//
-//        LocalBroadcastManager.getInstance(this).registerReceiver(new BroadcastReceiver() {
-//            @Override
-//            public void onReceive(Context context, Intent intent) {
-//                boolean isNetworkAvailable = intent.getBooleanExtra(IS_NETWORK_AVAILABLE, false);
-//                String networkStatus = isNetworkAvailable ? "connected" : "disconnected";
-//
-//                Toast.makeText(context, "Network Status: " + networkStatus, Toast.LENGTH_SHORT).show();
-////                Snackbar.make(findViewById(R.id.activity_main), "Network Status: " + networkStatus, Snackbar.LENGTH_LONG).show();
-//            }
-//        }, intentFilter1);
-
-
-//        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
-//
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_content), (v, insets) -> {
-//            Insets statusInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars());
-//            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
-//
-//            v.setPadding(0, statusInsets.top, 0, navInsets.bottom);
-//            return insets;
-//        });
 
         sentryException();
         performNetworkRequest();

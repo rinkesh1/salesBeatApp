@@ -8,10 +8,14 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Insets;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,6 +26,8 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -86,6 +92,44 @@ public class RetailerActivity extends AppCompatActivity implements NetworkChange
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.retailer_activity);
+
+        Window window = getWindow();
+
+// Clear translucent flag if set
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+// Set transparent colors for status and navigation bars
+        window.setStatusBarColor(Color.TRANSPARENT);
+        window.setNavigationBarColor(Color.TRANSPARENT);
+
+// For Android R and above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false);
+
+            final View rootView = findViewById(R.id.main_layout);
+            rootView.setOnApplyWindowInsetsListener((v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsets.Type.systemBars());
+                // Optionally use insets.top or bottom padding if needed
+                v.setPadding(0, systemBars.top, 0, systemBars.bottom); // or (0,0,0,0) if full overlay
+                return insets;
+            });
+        } else {
+            // For Android below R
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_layout), (v, insets) -> {
+                v.setPadding(0, insets.getSystemWindowInsetTop(), 0, insets.getSystemWindowInsetBottom());
+                return insets.consumeSystemWindowInsets();
+            });
+
+            // Also request layout flags to allow drawing under system bars
+            window.getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            );
+        }
+
+
         tempPref = getSharedPreferences(getString(R.string.temp_pref_name), Context.MODE_PRIVATE);
         salesBeatDb = SalesBeatDb.getHelper(this);
         retailerTab = findViewById(R.id.retailerTab);

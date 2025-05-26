@@ -21,6 +21,24 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/dashboard_layout.xml">
+        <config>
+          <state>Portrait</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/order_details.xml">
+        <config>
+          <state>Portrait</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/performance_graph.xml">
+        <config>
+          <state>Portrait</state>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_preferred_retailer.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -37,6 +55,16 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dashboard_layout.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/distrebutor_list.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/distrebutor_list_row.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -81,7 +109,22 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_booking_retailing.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_confirmation.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/order_details.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -91,7 +134,17 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/other_activity2.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/pin_set_up_activity.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/retailer_activity.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -101,7 +154,22 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/sku_list.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/snackbar_toast_floating.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/story_item_layout.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/tool_bar2.xml">
         <config>
           <theme>@style/AppTheme</theme>
         </config>
@@ -315,8 +383,11 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/LoginScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/LoginScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/OrderBookingRetailing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/OrderBookingRetailing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/OrderDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/PinSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/PinSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/PrimarySaleHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/PrimarySaleHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailerOrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailerOrderActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailersFeedBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/RetailersFeedBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/SalesAddActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/SalesAddActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/activities/SplashScreen.java" afterDir="false" />
@@ -346,6 +417,7 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/PrimarySale.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/PrimarySale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/RetailerOrderFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/RetailerOrderFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/ScheduledRetailerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/ScheduledRetailerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/SkusFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/SkusFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/TownList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/TownList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/TownList2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/TownList2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/VisitedRetailerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/fragments/VisitedRetailerList.java" afterDir="false" />
@@ -362,15 +434,20 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/utilityclass/SbAppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/utilityclass/SbAppConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/utilityclass/UtilityClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/newsalesbeatApp/utilityclass/UtilityClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/image_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/image_preview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/order_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/order_details.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/retailer_info_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/retailer_info_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dashboard_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dashboard_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/distributor_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/distributor_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/distributor_history_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/distributor_history_list.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/image_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/image_preview.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/new_distributor_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/new_distributor_search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_booking_retailing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_booking_retailing.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_confirmation_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_details.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/order_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/order_fragment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/other_activity2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/other_activity2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/retailer_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/retailer_activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />

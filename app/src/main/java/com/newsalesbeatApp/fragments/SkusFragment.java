@@ -5,7 +5,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.view.inputmethod.InputMethodManager;
@@ -81,6 +84,8 @@ public class SkusFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup parent, Bundle bundle) {
         View view = inflater.inflate(R.layout.sku_list, parent, false);
         //prefSFA = getContext().getSharedPreferences(getString(R.string.pref_name), Context.MODE_PRIVATE);
+
+
         tempPref = requireContext().getSharedPreferences(getString(R.string.temp_pref_name), Context.MODE_PRIVATE);
         imgBack = view.findViewById(R.id.imgBack);
         imgFilterBy = view.findViewById(R.id.imgFilterBy);

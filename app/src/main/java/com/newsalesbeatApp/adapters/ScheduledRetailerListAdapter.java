@@ -259,7 +259,7 @@ public class ScheduledRetailerListAdapter extends RecyclerView.Adapter<Scheduled
                         if(scheduledRetailerList.get(position).getLatitude().length() != 0 && scheduledRetailerList.get(position).getLongtitude().length() != 0){
                             boolean IsRadius = checkRadiusInMtr(scheduledRetailerList.get(position).getLatitude(), scheduledRetailerList.get(position).getLongtitude());
                             Log.d("TAG", "Check Radius :"+IsRadius);
-                            if (IsRadius) {
+//                            if (IsRadius) {
                                 boolean show = toggleLayoutExpand(!p.expanded, view, holder.lyt_expand);
                                 scheduledRetailerList.get(position).expanded = show;
 
@@ -294,12 +294,12 @@ public class ScheduledRetailerListAdapter extends RecyclerView.Adapter<Scheduled
 
 //                                notifyItemChanged(tempPosition);
                                 notifyDataSetChanged();
-                            } else {
-                                checkContext.showCustomToast(formatDistance, scheduledRetailerList.get(position).getLatitude()
-                                        , scheduledRetailerList.get(position).getLongtitude()
-                                        , scheduledRetailerList.get(position).getRetailerId());
-
-                            }
+//                            } else {
+//                                checkContext.showCustomToast(formatDistance, scheduledRetailerList.get(position).getLatitude()
+//                                        , scheduledRetailerList.get(position).getLongtitude()
+//                                        , scheduledRetailerList.get(position).getRetailerId());
+//
+//                            }
                         }else {
 //                            Toast.makeText(context, "This shop has not location data.", Toast.LENGTH_LONG).show();
 
