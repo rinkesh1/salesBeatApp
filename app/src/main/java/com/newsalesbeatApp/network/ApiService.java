@@ -1,5 +1,6 @@
 package com.newsalesbeatApp.network;
 
+import com.newsalesbeatApp.pojo.MenuResponse;
 import com.newsalesbeatApp.utilityclass.SbAppConstants;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -20,4 +21,7 @@ public interface ApiService {
 //
 //    @POST(SbAppConstants.API_GET_EMP_LEADER_BOARD)
 //    Call<ResponseBody> getEmpLeaderBoard(@Header("authorization") String token, @Body String filter);
+
+    @GET("api/Mobile/GetCustomiseMenu")
+    Call<MenuResponse> getCustomiseMenu(@Header("Authorization") String authHeader);
 } 

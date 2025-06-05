@@ -27,6 +27,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.newsalesbeatApp.R;
 import com.newsalesbeatApp.activities.ClosingActivity;
+import com.newsalesbeatApp.activities.CustomiseMenuActivity;
 import com.newsalesbeatApp.activities.Documets;
 import com.newsalesbeatApp.activities.MyClaimExpense;
 import com.newsalesbeatApp.activities.OrderBookingRetailing;
@@ -173,6 +174,12 @@ public class SbMenuListAdapter extends RecyclerView.Adapter<SbMenuListAdapter.Vi
             if (position == 4 || position == 8)
                 viewHolder.llLock.setVisibility(View.GONE);
         }
+
+        if (position == 9)
+            viewHolder.llLock.setVisibility(View.GONE);
+
+//        if (position == 10)
+//            viewHolder.llLock.setVisibility(View.GONE);
 
         viewHolder.mainLayout.setOnClickListener(view -> {
 
@@ -363,7 +370,28 @@ public class SbMenuListAdapter extends RecyclerView.Adapter<SbMenuListAdapter.Vi
 
                 }
 
-            } else {
+            }else if (position == 9) {
+
+                Log.d("TAG", "check Click position: "+position);
+                Intent intent = new Intent(context, CustomiseMenuActivity.class);
+//                intent.putExtra("page_title", android.get(position).getCategoryName());
+                context.startActivity(intent);
+
+
+                //((Activity) context).overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
+            }
+            /*else if (position == 10) {
+
+//                Intent intent = new Intent(context, OtherActivity.class);
+//                intent.putExtra("page_title", android.get(position).getCategoryName());
+//                context.startActivity(intent);
+
+
+                //((Activity) context).overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
+            }*/
+            else {
                 Toast.makeText(context, "Please mark present to enable this", Toast.LENGTH_SHORT).show();
             }
         });

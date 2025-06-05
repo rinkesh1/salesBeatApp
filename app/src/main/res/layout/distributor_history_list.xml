@@ -177,7 +177,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Mobile - 1"
+                    android:text="Mobile - 2"
                     android:textColor="#444"
                     android:textSize="14sp"
                     android:textStyle="bold"/>

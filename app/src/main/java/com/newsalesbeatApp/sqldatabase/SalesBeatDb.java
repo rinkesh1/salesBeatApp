@@ -4096,12 +4096,46 @@ public class SalesBeatDb extends SQLiteOpenHelper {
                 null, null, null);
     }
 
-    public Cursor getAllDataFromNewDistributorTable2() {
+   /* public Cursor getAllDataFromNewDistributorTable2() {
         SQLiteDatabase db = getReadableDb();
 
         return db.query(TABLE_NEW_DISTRIBUTOR, new String[]{},
                 null, null, null, null, null);
+    }*/
+
+    public Cursor getAllDataFromNewDistributorTable2() {
+        SQLiteDatabase db = getReadableDb();
+
+        return db.query(TABLE_NEW_DISTRIBUTOR,
+                new String[]{
+                        "name_of_firm",
+                        "firm_address",
+                        "pincode",
+                        "city",
+                        "state",
+                        "owner_name",
+                        "owner_mobile_no1",
+                        "owner_mobile_no2",
+                        "email_id",
+                        "gstin",
+                        "fssai_no",
+                        "pan_no",
+                        "monthly_turnover",
+                        "beat_name",
+                        "no_of_shop_in_beat",
+                        "investment_plan",
+                        "product_division",
+                        "working_since",
+                        "other_contact_person_name",
+                        "other_contact_person_phn",
+                        "opinion_about_distributor",
+                        "owner_image_time_stamp",
+                        "comment",
+                        "other_brand"
+                },
+                null, null, null, null, null);
     }
+
 
     public boolean deleteSpecificDataFromNewDistributorTable(String tempDid) {
         SQLiteDatabase db = getWritableDb();

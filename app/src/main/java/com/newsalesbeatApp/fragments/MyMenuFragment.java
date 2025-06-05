@@ -317,7 +317,6 @@ public class MyMenuFragment extends Fragment {
     private void initializeMenuList() {
 
         ArrayList<MyCategory> androidVersions = prepareData();
-
         final SbMenuListAdapter adapter = new SbMenuListAdapter(getContext(), androidVersions);
 
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
@@ -328,7 +327,7 @@ public class MyMenuFragment extends Fragment {
 
     }
 
-    private ArrayList<MyCategory> prepareData() {
+    /*private ArrayList<MyCategory> prepareData() {
 
         ArrayList<MyCategory> android_version = new ArrayList<>();
         for (int i = 0; i < categoryOptions.length; i++) {
@@ -338,6 +337,33 @@ public class MyMenuFragment extends Fragment {
             myCategory.setIcon(backImage[i]);
             android_version.add(myCategory);
         }
+        return android_version;
+    }*/
+
+    private ArrayList<MyCategory> prepareData() {
+
+        ArrayList<MyCategory> android_version = new ArrayList<>();
+
+        // Existing loop to add from arrays
+        for (int i = 0; i < categoryOptions.length; i++) {
+            MyCategory myCategory = new MyCategory();
+            myCategory.setCategoryName(categoryOptions[i]);
+            myCategory.setIcon(backImage[i]);
+            android_version.add(myCategory);
+        }
+
+        // Manually adding "Rinkesh"
+        MyCategory rp = new MyCategory();
+        rp.setCategoryName("Reports");
+        rp.setIcon(R.drawable.ic_joint_work_black_24dp); // Use a default or valid icon here
+        android_version.add(rp);
+
+//        // Manually adding "Rinkesh1"
+//        MyCategory rinkesh1 = new MyCategory();
+//        rinkesh1.setCategoryName("Rinkesh1");
+//        rinkesh1.setIcon(R.drawable.ic_add); // Use a valid icon
+//        android_version.add(rinkesh1);
+
         return android_version;
     }
 

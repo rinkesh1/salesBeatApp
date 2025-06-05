@@ -58,6 +58,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -156,6 +157,7 @@ public class AddNewDistributorForm extends Fragment {
     GPSLocation locationProvider;
     ChipGroup chipGroup;
     private SalesBeatDb salesBeatDb;
+    ProgressBar loader;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -163,6 +165,7 @@ public class AddNewDistributorForm extends Fragment {
         view =  inflater.inflate(R.layout.fragment_add_new_distributor_form, container, false);
 //        myPref = getActivity().getSharedPreferences(getActivity().getString(R.string.pref_name), Context.MODE_PRIVATE);
         salesBeatDb = SalesBeatDb.getHelper(requireContext());
+        loader = view.findViewById(R.id.loader);
         myPref = requireContext().getSharedPreferences(getString(R.string.pref_name), Context.MODE_PRIVATE);
         Log.d("TAG", "AddNewDistributorForm :"+myPref.getString("token",""));
 //        formContainer = view.findViewById(R.id.formContainer);
@@ -178,22 +181,35 @@ public class AddNewDistributorForm extends Fragment {
     }
 
     private void deleteAudioFile() {
-        Uri fileUri = getLatestAudioFileUri();
-//        Log.d("TAG", "Delete path: "+fileUri.getPath());
-        if (fileUri != null) {
-            ContentResolver resolver = getActivity().getContentResolver();
-            int deletedRows = resolver.delete(fileUri, null, null);
-
-            if (deletedRows > 0) {
-
-//                Toast.makeText(getActivity(), "File deleted", Toast.LENGTH_SHORT).show();
-            } else {
-//                Toast.makeText(getActivity(), "Failed to delete file", Toast.LENGTH_SHORT).show();
+        try {
+            Uri fileUri = getLatestAudioFileUri();
+            if (fileUri != null) {
+                ContentResolver resolver = requireActivity().getContentResolver();
+                int deletedRows = resolver.delete(fileUri, null, null);
+                Log.d("TAG", "Deleted rows: " + deletedRows);
             }
-        } else {
-//            Toast.makeText(getActivity(), "File not found", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Log.e("TAG", "deleteAudioFile: " + e.getMessage());
         }
     }
+
+//    private void deleteAudioFile() {
+//        Uri fileUri = getLatestAudioFileUri();
+////        Log.d("TAG", "Delete path: "+fileUri.getPath());
+//        if (fileUri != null) {
+//            ContentResolver resolver = getActivity().getContentResolver();
+//            int deletedRows = resolver.delete(fileUri, null, null);
+//
+//            if (deletedRows > 0) {
+//
+////                Toast.makeText(getActivity(), "File deleted", Toast.LENGTH_SHORT).show();
+//            } else {
+////                Toast.makeText(getActivity(), "Failed to delete file", Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+////            Toast.makeText(getActivity(), "File not found", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
     private void startService() {
         SampleResultReceiver resultReceiever = new SampleResultReceiver(new Handler());
@@ -203,6 +219,41 @@ public class AddNewDistributorForm extends Fragment {
     }
 
     private void getFormResponse() {
+        try {
+        loader.setVisibility(View.VISIBLE);
+
+        clientInterface = RetrofitClient.getClient().create(ClientInterface.class);
+        String strToken = myPref.getString("token", "");
+        Call<JsonObject> jsonObjectCall = clientInterface.getDisJsonForm(strToken);
+
+        jsonObjectCall.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, retrofit2.Response<JsonObject> response) {
+                loader.setVisibility(View.GONE);
+                if (response.isSuccessful() && response.body() != null) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response.body().toString());
+                        JSONArray fieldsArray = jsonObject.getJSONArray("fields");
+                        generateForm(fieldsArray);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Log.e("TAG", "Error Code: " + response.code());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+                loader.setVisibility(View.GONE);
+                Log.e("TAG", "Failed Get Sku List " + t.getMessage());
+            }
+        });
+        } catch (Exception e) {
+            Log.e("TAG", "api: " + e.getMessage());
+        }
+    }
+    private void getFormResponse1() {
         clientInterface = RetrofitClient.getClient().create(ClientInterface.class);
         String strToken = myPref.getString("token", "");
         Log.d("TAG", "getSkuList Token: " + strToken);
@@ -217,37 +268,6 @@ public class AddNewDistributorForm extends Fragment {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().toString());
                         JSONArray fieldsArray = jsonObject.getJSONArray("fields");
-
-                        /*String jsonString = "{"
-                                + "\"formTitle\": \"New Distributor Registration\","
-                                + "\"fields\": ["
-                                + "{ \"id\": \"firmName\", \"label\": \"Name of Firm\", \"type\": \"text\", \"required\": true, \"validation\": { \"minLength\": 2, \"maxLength\": 100 } },"
-                                + "{ \"id\": \"firmAddress\", \"label\": \"Company/Firm Address\", \"type\": \"text\", \"required\": true, \"validation\": { \"minLength\": 5, \"maxLength\": 255 } },"
-                                + "{ \"id\": \"pinCode\", \"label\": \"Pincode/ZipCode\", \"type\": \"number\", \"required\": true, \"validation\": { \"pattern\": \"^[1-9][0-9]{5}$\" } },"
-                                + "{ \"id\": \"city\", \"label\": \"Town/City/District\", \"type\": \"text\", \"required\": true, \"validation\": { \"minLength\": 2, \"maxLength\": 100 } },"
-                                + "{ \"id\": \"state\", \"label\": \"State\", \"type\": \"text\", \"required\": true },"
-                                + "{ \"id\": \"ownerName\", \"label\": \"Owner Name\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[A-Za-z ]{2,100}$\" } },"
-                                + "{ \"id\": \"ownerMobile1\", \"label\": \"Mobile Number 1\", \"type\": \"number\", \"required\": true, \"validation\": { \"pattern\": \"^[6-9][0-9]{9}$\" } },"
-                                + "{ \"id\": \"ownerMobile2\", \"label\": \"Mobile Number 2\", \"type\": \"number\", \"required\": false, \"validation\": { \"pattern\": \"^[6-9][0-9]{9}$\" } },"
-                                + "{ \"id\": \"email\", \"label\": \"Owner Email\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,}$\" } },"
-                                + "{ \"id\": \"gstin\", \"label\": \"GSTIN\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}[Z]{1}[0-9A-Z]{1}$\" } },"
-                                + "{ \"id\": \"fsi\", \"label\": \"FSSAI Reg No/Licence No\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[0-9]{14}$\" } },"
-                                + "{ \"id\": \"pan\", \"label\": \"PAN No\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[A-Z]{5}[0-9]{4}[A-Z]{1}$\" } },"
-                                + "{ \"id\": \"otherBrand\", \"label\": \"Other Brand\", \"type\": \"dynamicText\", \"required\": false, \"icon\": \"plus\", \"placeholder\": \"Enter brand name\" },"
-                                + "{ \"id\": \"beatName\", \"label\": \"beat Name\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[A-Za-z ]{2,100}$\" } },"
-                                + "{ \"id\": \"otherContactPersonNames\", \"label\": \"Contact Person Name\", \"type\": \"text\", \"required\": true, \"validation\": { \"pattern\": \"^[A-Za-z ]{2,100}$\" } },"
-                                + "{ \"id\": \"otherContactPersonPhones\", \"label\": \"Contact Person Number\", \"type\": \"number\", \"required\": true, \"validation\": { \"pattern\": \"^[6-9][0-9]{9}$\" } },"
-                                + "{ \"id\": \"productDivision\", \"label\": \"Product Division\", \"type\": \"checkbox\", \"required\": true, \"options\": [ \"Real Gold Select\", \"Real Gold\", \"Real Taste\", \"Raid\" ] },"
-                                + "{ \"id\": \"opinion\", \"label\": \"Your Opinion about distributor\", \"type\": \"radio\", \"required\": true, \"options\": [ \"Best\", \"Good\", \"Average\", \"Fresher\" ] }"
-                                + "]"
-                                + "}";
-
-                                JSONObject jo = new JSONObject(jsonString);
-                                JSONArray fieldsArray = jo.getJSONArray("fields");
-                                generateForm(fieldsArray);
-
-
-                                */
 
                         generateForm(fieldsArray);
 
@@ -1863,19 +1883,35 @@ public class AddNewDistributorForm extends Fragment {
         String audioFile = "";
 
         Uri fileUri = getLatestAudioFileUri();
-        Log.d("TAG", "SAve File Path: "+fileUri.getPath());
+        File file = null;
 
         if (fileUri != null) {
-            File file = getFileFromUri(fileUri);
-
-            if (file != null && file.exists()) {
-                uploadFile(file,formLayout);
-            } else {
-                Toast.makeText(getActivity(), "Recording not found-1.", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(getActivity(), "Recording not found-2.", Toast.LENGTH_SHORT).show();
+            file = getFileFromUri(fileUri);
         }
+
+        if (file != null && file.exists()) {
+            uploadFile(file, formLayout);
+        } else {
+            Toast.makeText(getActivity(), "Recording not found.", Toast.LENGTH_SHORT).show();
+            getActivity().runOnUiThread(() -> updateApiCall("no rec",formLayout));
+//            uploadFile(null, formLayout);
+        }
+
+
+//        Uri fileUri = getLatestAudioFileUri();
+////        Log.d("TAG", "SAve File Path: "+fileUri.getPath());
+//
+//        if (fileUri != null) {
+//            File file = getFileFromUri(fileUri);
+//
+//            if (file != null && file.exists()) {
+//                uploadFile(file,formLayout);
+//            } else {
+//                Toast.makeText(getActivity(), "Recording not found-1.", Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+//            Toast.makeText(getActivity(), "Recording not found-2.", Toast.LENGTH_SHORT).show();
+//        }
 
     }
 
